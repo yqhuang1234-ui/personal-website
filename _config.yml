@@ -13,7 +13,7 @@ timezone: 'America/New_York'
 
 # URL
 ## GitHub Pages project site URL (username.github.io/repo-name)
-url: https://yqhuang1234-ui.github.io/personal-website
+url: https://yqhuang1234-ui.github.io/
 root: /personal-website/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
