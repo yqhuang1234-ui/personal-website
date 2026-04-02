@@ -203,6 +203,7 @@ date: 2026-04-02 06:21:26
     </div>
     <div class="project-links">
       <a class="btn btn-primary" href="https://github.com/yqhuang1234-ui/surgery_timing_outcome" target="_blank" rel="noopener">View Code</a>
+      <a class="btn btn-outline" href="https://github.com/yqhuang1234-ui/surgery_timing_outcome/blob/c77953e5f38a14e208dad83299d162daeca90d78/2025-12-02_report-only_surgery-timing-outcome_yanqi-huang.pdf" target="_blank" rel="noopener">View Report</a>
     </div>
   </div>
 
