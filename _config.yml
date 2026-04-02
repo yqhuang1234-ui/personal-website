@@ -104,6 +104,6 @@ theme: fluid
 ## Used by GitHub Actions (and optionally `hexo deploy` manually)
 deploy:
   type: git
-  repo: https://github.com/yqhuang1234-ui/personal-website.git
+  repo: https://github.com/yqhuang1234-ui/.git
   branch: gh-pages
   message: "Deploy site [ci skip] - {{ now('YYYY-MM-DD HH:mm:ss') }}"
