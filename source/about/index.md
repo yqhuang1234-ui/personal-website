@@ -3,72 +3,352 @@ title: About
 date: 2026-04-02 05:12:39
 ---
 
-Hi, I'm **Yanqi Huang** — a graduate student in Biostatistics and a current PhD applicant. My work sits at the intersection of statistical methodology and public health, with a focus on drawing reliable causal conclusions from messy, real-world data. I'm drawn to problems where the stakes are high and the data are complicated: observational studies, clinical registries, and longitudinal cohorts where standard methods break down and careful statistical thinking genuinely matters.
+<style>
+/* ── About page — namespace: ab- ────────────────────────────────── */
 
-My primary research interests are in **causal inference** and **survival analysis**. On the causal side, I think a lot about identifiability — what assumptions are needed, when they're plausible, and how sensitive conclusions are when they fail. On the survival side, I'm interested in competing risks and multi-state models, particularly in settings where administrative censoring and informative dropout make things interesting. Across both areas, I care about methods that are not just theoretically elegant but practically usable by applied researchers.
+.ab-intro {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+}
 
-Before graduate school, I developed a strong foundation in mathematics and probability that I now draw on daily. I enjoy the full arc of statistical work — from reading a messy dataset for the first time, through careful model-building, to communicating results clearly to collaborators who aren't statisticians. Outside of research, you'll find me reading, hiking, or slowly working through a backlog of interesting papers.
+/* ── Timeline ───────────────────────────────────────────────────── */
+.ab-section-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8a9bac;
+  margin: 0 0 1.25rem;
+}
+
+.ab-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 3rem;
+  border-left: 2px solid #e0e4ea;
+  padding-left: 1.5rem;
+}
+
+.ab-step {
+  position: relative;
+  padding-bottom: 1.75rem;
+}
+
+.ab-step:last-child { padding-bottom: 0; }
+
+.ab-step::before {
+  content: "";
+  position: absolute;
+  left: -1.875rem;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2a5298;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #2a5298;
+}
+
+.ab-step-year {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2a5298;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.ab-step-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.2rem;
+}
+
+.ab-step-desc {
+  font-size: 0.875rem;
+  color: #5a6a7a;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Artwork grid ───────────────────────────────────────────────── */
+.ab-art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.ab-art-card {
+  border: 1px solid #e0e4ea;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ab-art-placeholder {
+  height: 180px;
+  background: #f4f5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #b0bac4;
+  font-size: 0.82rem;
+}
+
+.ab-art-placeholder svg {
+  width: 28px;
+  height: 28px;
+  opacity: 0.4;
+}
+
+.ab-art-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.ab-art-body {
+  padding: 0.7rem 0.85rem 0.8rem;
+}
+
+.ab-art-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.2rem;
+}
+
+.ab-art-caption {
+  font-size: 0.8rem;
+  color: #5a6a7a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Outdoors ───────────────────────────────────────────────────── */
+.ab-outdoor-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.ab-outdoor-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: #2c3e50;
+}
+
+.ab-outdoor-emoji { font-size: 1.3rem; line-height: 1; }
+.ab-outdoor-text  { font-weight: 500; }
+
+.ab-outdoor-sub {
+  font-size: 0.875rem;
+  color: #5a6a7a;
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ── Research ───────────────────────────────────────────────────── */
+.ab-research-list {
+  padding-left: 1.25rem;
+  margin: 0 0 3rem;
+}
+
+.ab-research-list li {
+  font-size: 0.92rem;
+  color: #2c3e50;
+  line-height: 1.7;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Education ──────────────────────────────────────────────────── */
+.ab-edu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.ab-edu-degree {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.15rem;
+}
+
+.ab-edu-meta {
+  font-size: 0.85rem;
+  color: #5a6a7a;
+  margin: 0;
+}
+
+.ab-section { margin-bottom: 2.75rem; }
+
+/* ── Dark mode ──────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .ab-intro             { color: #c4c6c9; }
+  .ab-section-title     { color: #687582; }
+  .ab-timeline          { border-left-color: #435266; }
+  .ab-step::before      { background: #5b8ef0; box-shadow: 0 0 0 2px #5b8ef0; border-color: #252d38; }
+  .ab-step-year         { color: #5b8ef0; }
+  .ab-step-title        { color: #c4c6c9; }
+  .ab-step-desc         { color: #a7a9ad; }
+  .ab-art-card          { background: #252d38; border-color: #435266; }
+  .ab-art-placeholder   { background: #2e3848; color: #687582; }
+  .ab-art-label         { color: #c4c6c9; }
+  .ab-art-caption       { color: #a7a9ad; }
+  .ab-outdoor-item      { color: #c4c6c9; }
+  .ab-outdoor-text      { color: #c4c6c9; }
+  .ab-outdoor-sub       { color: #a7a9ad; }
+  .ab-research-list li  { color: #c4c6c9; }
+  .ab-edu-degree        { color: #c4c6c9; }
+  .ab-edu-meta          { color: #a7a9ad; }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .ab-art-grid    { grid-template-columns: 1fr; }
+  .ab-outdoor-row { gap: 1rem; }
+}
+</style>
+
+<p class="ab-intro">
+  I think in gradients and paint in watercolor. After six years as a data scientist, I came back to school to do it <em>right</em> — rigorous methods, real biomedical questions, and eventually a PhD. I care just as much about making something beautiful as making something correct.
+</p>
 
 ---
 
-## Research Interests
+<div class="ab-section">
+<p class="ab-section-title">My Path</p>
+<div class="ab-timeline">
 
-- **Causal inference** — observational studies, propensity score methods, instrumental variables, sensitivity analysis
-- **Survival analysis** — competing risks, multi-state models, time-varying exposures
-- **Longitudinal data analysis** — mixed models, GEE, missing data and informative dropout
-- **Statistical methods for public health** — electronic health records, clinical trial design, precision medicine
-- **High-dimensional statistics** — variable selection, penalized regression in biomedical settings
+  <div class="ab-step">
+    <p class="ab-step-year">2019 – 2020</p>
+    <p class="ab-step-title">Master of Business Analytics</p>
+    <p class="ab-step-desc">Built the technical foundation — statistics, machine learning, data engineering. Learned to turn messy data into decisions.</p>
+  </div>
 
----
+  <div class="ab-step">
+    <p class="ab-step-year">2020 – 2025 · 6 years</p>
+    <p class="ab-step-title">Data Scientist — Industry</p>
+    <p class="ab-step-desc">Shipped ML models in production, worked with large-scale datasets, and developed intuition for what breaks in the real world.</p>
+  </div>
 
-## Skills
+  <div class="ab-step">
+    <p class="ab-step-year">2025 – Present</p>
+    <p class="ab-step-title">M.S. Biostatistics</p>
+    <p class="ab-step-desc">Bringing data science into the biomedical world — rigorous methods, clinical data, and the math behind why things work.</p>
+  </div>
 
-### Statistical & Computational
-- **R** — tidyverse, survival, lme4, ggplot2, Rmarkdown/Quarto, custom package development
-- **Python** — pandas, NumPy, scikit-learn, lifelines, matplotlib
-- **Stan / JAGS** — Bayesian hierarchical modeling
-- **SAS** — PROC MIXED, PROC PHREG, PROC LIFETEST; experience with clinical trial datasets
-- **SQL** — querying relational databases; experience with large EHR data
+  <div class="ab-step">
+    <p class="ab-step-year">Next</p>
+    <p class="ab-step-title">PhD (Planned)</p>
+    <p class="ab-step-desc">Research at the intersection of machine learning and biomedical data — methods that are both principled and practically useful.</p>
+  </div>
 
-### Methodological
-- Causal inference (propensity scores, IV, difference-in-differences, mediation)
-- Survival and time-to-event analysis
-- Generalized linear and mixed-effects models
-- Simulation studies and bootstrap inference
-- Missing data (multiple imputation, MCAR/MAR/MNAR mechanisms)
-
-### Tools & Workflow
-- Git / GitHub — version control, collaborative development
-- LaTeX — manuscripts, beamer presentations
-- Quarto / R Markdown — reproducible reports and technical writing
-- UNIX / Bash — scripting, HPC cluster job submission
-
----
-
-## Education
-
-**M.S. in Biostatistics** *(2025 – Present)*
-[Your University] · Advisor: Prof. [Name]
-*Thesis: [Thesis title placeholder]*
-
-**B.S. in [Major]** *(2021 – 2025)*
-[Undergraduate University]
-*Minor: [Minor] · GPA: [X.XX] · [Honors, if applicable]*
+</div>
+</div>
 
 ---
 
-## Selected Coursework
+<div class="ab-section">
+<p class="ab-section-title">Creative Life</p>
+<div class="ab-art-grid">
 
-| Area | Courses |
-|---|---|
-| Theory | Mathematical Statistics I & II, Probability Theory |
-| Methods | Linear Models, Survival Analysis, Longitudinal Data Analysis |
-| Causal | Causal Inference, Observational Studies |
-| Computing | Statistical Computing, Data Science for Public Health |
+  <div class="ab-art-card">
+    <!-- To add your photo, replace the placeholder div with:
+         <img class="ab-art-img" src="/img/artwork/watercolor.jpg" alt="Watercolor painting"> -->
+    <div class="ab-art-placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      <span>Photo coming soon</span>
+    </div>
+    <div class="ab-art-body">
+      <p class="ab-art-label">Watercolor</p>
+      <p class="ab-art-caption">Loose, expressive, and a little unpredictable — just like data.</p>
+    </div>
+  </div>
+
+  <div class="ab-art-card">
+    <!-- To add your photo, replace the placeholder div with:
+         <img class="ab-art-img" src="/img/artwork/crochet.jpg" alt="Crochet work"> -->
+    <div class="ab-art-placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="3" cy="3" width="18" height="18" rx="2"/><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      <span>Photo coming soon</span>
+    </div>
+    <div class="ab-art-body">
+      <p class="ab-art-label">Crochet</p>
+      <p class="ab-art-caption">Repetition with variation — a pattern that's never quite the same twice.</p>
+    </div>
+  </div>
+
+  <div class="ab-art-card">
+    <!-- To add your photo, replace the placeholder div with:
+         <img class="ab-art-img" src="/img/artwork/sewing.jpg" alt="Sewing project"> -->
+    <div class="ab-art-placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      <span>Photo coming soon</span>
+    </div>
+    <div class="ab-art-body">
+      <p class="ab-art-label">Sewing</p>
+      <p class="ab-art-caption">Precision and patience — measuring twice, cutting once.</p>
+    </div>
+  </div>
+
+</div>
+</div>
 
 ---
 
-## Contact
+<div class="ab-section">
+<p class="ab-section-title">Outside the Lab</p>
+<div class="ab-outdoor-row">
+  <div class="ab-outdoor-item"><span class="ab-outdoor-emoji">🥾</span><span class="ab-outdoor-text">Hiking</span></div>
+  <div class="ab-outdoor-item"><span class="ab-outdoor-emoji">🚴</span><span class="ab-outdoor-text">Biking</span></div>
+  <div class="ab-outdoor-item"><span class="ab-outdoor-emoji">🏃</span><span class="ab-outdoor-text">Half Marathon</span></div>
+</div>
+<p class="ab-outdoor-sub">I run at least one half marathon a year — it's the only deadline I never miss. Trails and long rides are where I do my best thinking.</p>
+</div>
 
-I'm always happy to talk about research, statistics, or PhD programs.
-Reach me at **[yqhuang1234@gmail.com](mailto:yqhuang1234@gmail.com)** or find me on [GitHub](https://github.com/yqhuang1234-ui).
+---
+
+<div class="ab-section">
+<p class="ab-section-title">Research Interests</p>
+<ul class="ab-research-list">
+  <li><strong>Machine learning for biomedical data</strong> — applying ML and deep learning to clinical, genomic, and EHR datasets</li>
+  <li><strong>Predictive modeling</strong> — building models that generalize under distribution shift and real-world messiness</li>
+  <li><strong>Neural networks in healthcare</strong> — interpretable models, survival prediction, multi-modal data fusion</li>
+  <li><strong>Bridging industry DS and academic methods</strong> — making production-grade approaches statistically rigorous</li>
+</ul>
+</div>
+
+---
+
+<div class="ab-section">
+<p class="ab-section-title">Education</p>
+<div class="ab-edu">
+  <div>
+    <p class="ab-edu-degree">M.S. in Biostatistics <em>(2025 – Present)</em></p>
+    <p class="ab-edu-meta">Statistical methods · ML applications in biomedicine · PhD track</p>
+  </div>
+  <div>
+    <p class="ab-edu-degree">Master of Business Analytics <em>(2019 – 2020)</em></p>
+    <p class="ab-edu-meta">Statistics · Machine learning · Data engineering</p>
+  </div>
+</div>
+</div>
+
+---
+
+I'm always happy to talk research, statistics, or PhD programs — reach me at **[yqhuang1234@gmail.com](mailto:yqhuang1234@gmail.com)** or on [GitHub](https://github.com/yqhuang1234-ui).

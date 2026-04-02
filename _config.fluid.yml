@@ -185,7 +185,9 @@ index:
   slogan:
     enable: true
     text:
-      - "Keep showing up "
+      - "Keep showing up."
+      - "Machine Learning · Deep Learning · Methods for Biomedicine."
+      - "Also: Watercolor. Crochet. Half marathons."
   auto_excerpt:
     enable: true
   post_url_target: _self
@@ -279,7 +281,7 @@ about:
   banner_mask_alpha: 0.4
   avatar: /img/avatar.png
   name: "Yanqi Huang"
-  intro: "M.S. Biostatistics"
+  intro: "MS Biostatistics · PhD Applicant · Ex-Data Scientist · ML/DL"
   icons:
     - { class: "iconfont icon-github-fill",  link: "https://github.com/yqhuang1234-ui", tip: "GitHub" }
     - { class: "iconfont icon-mail-fill",    link: "mailto:yqhuang1234@gmail.com",      tip: "Email" }
