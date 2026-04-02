@@ -12,8 +12,9 @@ language: en
 timezone: 'America/New_York'
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+## GitHub Pages project site URL (username.github.io/repo-name)
+url: https://yqhuang1234-ui.github.io/personal-website
+root: /personal-website/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -100,5 +101,9 @@ theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+## Used by GitHub Actions (and optionally `hexo deploy` manually)
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/yqhuang1234-ui/personal-website.git
+  branch: gh-pages
+  message: "Deploy site [ci skip] - {{ now('YYYY-MM-DD HH:mm:ss') }}"
