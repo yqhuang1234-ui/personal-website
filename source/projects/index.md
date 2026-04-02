@@ -3,27 +3,231 @@ title: Projects
 date: 2026-04-02 06:21:26
 ---
 
-Research projects and work in progress. Full details coming soon.
+<style>
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 720px;
+  margin: 2rem auto 0;
+}
 
----
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e0e4ea;
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
 
-## Research Projects
+.project-card:hover {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+}
 
-**Project Title Placeholder** *(2025 – Present)*
-Brief description of the project, methods used, and current status.
-Tags: Causal Inference · R
+.project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
 
-**Project Title Placeholder** *(2025)*
-Brief description of this project.
-Tags: Survival Analysis · Python
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+}
 
----
+.project-date {
+  font-size: 0.8rem;
+  color: #8a9bac;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
-## Course & Independent Projects
+.project-desc {
+  font-size: 0.92rem;
+  color: #5a6a7a;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
 
-**Course Project Placeholder** *(Fall 2025)*
-Brief description.
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
 
----
+.tag {
+  display: inline-block;
+  padding: 0.2em 0.65em;
+  background: #eef2fa;
+  color: #2a5298;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
 
-*More details coming soon. See my [CV](/cv/) for the full list.*
+.project-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.38em 1em;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2c3e50;
+  color: #ffffff;
+  border: 1px solid #2c3e50;
+}
+
+.btn-primary:hover {
+  background: #1e2d3d;
+  border-color: #1e2d3d;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2a5298;
+  border: 1px solid #2a5298;
+}
+
+.btn-outline:hover {
+  background: #eef2fa;
+  color: #1e3f80;
+  border-color: #1e3f80;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .project-card {
+    background: #252d38;
+    border-color: #435266;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .project-card:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  .project-title {
+    color: #c4c6c9;
+  }
+
+  .project-date {
+    color: #6b7f92;
+  }
+
+  .project-desc {
+    color: #a7a9ad;
+  }
+
+  .tag {
+    background: #364151;
+    color: #5b8ef0;
+  }
+
+  .btn-primary {
+    background: #3d5166;
+    border-color: #3d5166;
+    color: #e8ecf0;
+  }
+
+  .btn-primary:hover {
+    background: #4a6278;
+    border-color: #4a6278;
+    color: #ffffff;
+  }
+
+  .btn-outline {
+    color: #5b8ef0;
+    border-color: #5b8ef0;
+  }
+
+  .btn-outline:hover {
+    background: #364151;
+    color: #7aaef5;
+    border-color: #7aaef5;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .project-card {
+    padding: 1.2rem 1.25rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+</style>
+
+<div class="projects-grid">
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">Surgery Timing and 30-Day Mortality Outcomes</h3>
+      <span class="project-date">Nov 2025</span>
+    </div>
+    <p class="project-desc">
+      Investigates whether the hour of day a surgery is performed correlates with 30-day patient mortality.
+      Applies logistic regression with restricted cubic splines to 32,001 surgical cases, capturing non-linear
+      timing effects while adjusting for patient comorbidities and procedure classification. Produces a
+      reproducible PDF report with baseline characteristic tables, odds ratio estimates, and risk visualizations.
+    </p>
+    <div class="project-tags">
+      <span class="tag">R</span>
+      <span class="tag">Logistic Regression</span>
+      <span class="tag">Restricted Cubic Splines</span>
+      <span class="tag">ggplot2</span>
+      <span class="tag">gtsummary</span>
+    </div>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/yqhuang1234-ui/surgery_timing_outcome" target="_blank" rel="noopener">View Code</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">OLS Under Heteroscedasticity: A Monte Carlo Simulation</h3>
+      <span class="project-date">Oct 2025</span>
+    </div>
+    <p class="project-desc">
+      A Monte Carlo simulation study (1,000 repetitions) examining how heteroscedasticity violations affect
+      OLS regression inference. Evaluates estimator bias, standard error accuracy, and confidence interval
+      coverage across four error-variance intensity levels, showing when and why classical OLS inference
+      breaks down and robust standard errors are needed.
+    </p>
+    <div class="project-tags">
+      <span class="tag">R</span>
+      <span class="tag">Monte Carlo Simulation</span>
+      <span class="tag">OLS Regression</span>
+      <span class="tag">ggplot2</span>
+      <span class="tag">bookdown</span>
+    </div>
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/yqhuang1234-ui/simulation-study" target="_blank" rel="noopener">View Code</a>
+      <a class="btn btn-outline" href="https://github.com/yqhuang1234-ui/simulation-study/blob/main/10-24-25_yanqi-huang_simulation-report_only.pdf" target="_blank" rel="noopener">View Report</a>
+    </div>
+  </div>
+
+</div>
