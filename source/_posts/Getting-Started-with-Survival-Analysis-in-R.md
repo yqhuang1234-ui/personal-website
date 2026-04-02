@@ -53,9 +53,9 @@ km_fit <- survfit(Surv(time, status) ~ sex, data = lung)
 ggsurvplot(
   km_fit,
   data          = lung,
-  pval          = TRUE,       # log-rank p-value on the plot
+  pval          = TRUE,
   conf.int      = TRUE,
-  risk.table    = TRUE,       # numbers at risk below x-axis
+  risk.table    = TRUE,
   legend.labs   = c("Male", "Female"),
   xlab          = "Days",
   ylab          = "Survival probability",
