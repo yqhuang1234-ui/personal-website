@@ -168,6 +168,40 @@ date: 2026-04-02 06:21:26
   }
 }
 
+/* Project image */
+.project-img-wrap {
+  margin: 0.75rem 0 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.project-img-wrap img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-img-placeholder {
+  height: 160px;
+  background: #f4f5f7;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  color: #b0bac4;
+  border: 1px dashed #d0d6de;
+}
+
+@media (prefers-color-scheme: dark) {
+  .project-img-placeholder {
+    background: #2e3848;
+    color: #687582;
+    border-color: #435266;
+  }
+}
+
 /* Mobile */
 @media (max-width: 600px) {
   .project-card {
@@ -194,6 +228,11 @@ date: 2026-04-02 06:21:26
       timing effects while adjusting for patient comorbidities and procedure classification. Produces a
       reproducible PDF report with baseline characteristic tables, odds ratio estimates, and risk visualizations.
     </p>
+    <div class="project-img-wrap">
+      <!-- To add a photo: replace the placeholder div with:
+           <img src="/img/projects/surgery-timing.jpg" alt="Surgery Timing project"> -->
+      <div class="project-img-placeholder">📷 Photo coming soon</div>
+    </div>
     <div class="project-tags">
       <span class="tag">R</span>
       <span class="tag">Logistic Regression</span>
@@ -218,6 +257,11 @@ date: 2026-04-02 06:21:26
       coverage across four error-variance intensity levels, showing when and why classical OLS inference
       breaks down and robust standard errors are needed.
     </p>
+    <div class="project-img-wrap">
+      <!-- To add a photo: replace the placeholder div with:
+           <img src="/img/projects/monte-carlo-sim.jpg" alt="Monte Carlo Simulation project"> -->
+      <div class="project-img-placeholder">📷 Photo coming soon</div>
+    </div>
     <div class="project-tags">
       <span class="tag">R</span>
       <span class="tag">Monte Carlo Simulation</span>

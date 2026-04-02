@@ -117,6 +117,16 @@ date: 2026-04-02
   overflow: hidden;
 }
 
+.ex-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px 4px 0 0;
+  margin: -1.1rem -1.25rem 0.75rem;
+  width: calc(100% + 2.5rem);
+}
+
 .ex-card-tags {
   display: flex;
   flex-wrap: wrap;
@@ -175,12 +185,19 @@ date: 2026-04-02
 
 <script>
 (function () {
+  /* ── Cover image lookup (keyed by post URL) ─────────────────── */
+  const POST_IMGS = {
+    '/2026/04/02/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
+    '/2026/04/02/Getting-Started-with-Survival-Analysis-in-R/': '/img/posts/survival-analysis.jpg'
+  };
+
   /* ── Hardcoded project data ──────────────────────────────────── */
   const PROJECTS = [
     {
       type: 'project',
       title: 'Surgery Timing and 30-Day Mortality Outcomes',
       url: '/projects/',
+      img: '/img/projects/surgery-timing.jpg',
       desc: 'Investigates whether the hour of day a surgery is performed correlates with 30-day patient mortality. Applies logistic regression with restricted cubic splines to 32,001 surgical cases.',
       tags: ['R', 'Logistic Regression', 'Restricted Cubic Splines', 'ggplot2', 'gtsummary']
     },
@@ -188,6 +205,7 @@ date: 2026-04-02
       type: 'project',
       title: 'OLS Under Heteroscedasticity: A Monte Carlo Simulation',
       url: '/projects/',
+      img: '/img/projects/monte-carlo-sim.jpg',
       desc: 'A Monte Carlo simulation study (1,000 repetitions) examining how heteroscedasticity violations affect OLS regression inference across four error-variance intensity levels.',
       tags: ['R', 'Monte Carlo Simulation', 'OLS Regression', 'ggplot2', 'bookdown']
     }
@@ -202,10 +220,12 @@ date: 2026-04-02
       const tags = Array.from(e.querySelectorAll('tags tag')).map(t => t.textContent.trim());
       const content = (e.querySelector('content') || {}).textContent || '';
       const desc = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
+      const url = (e.querySelector('url') || {}).textContent || '#';
       return {
         type: 'blog',
         title: (e.querySelector('title') || {}).textContent || 'Untitled',
-        url: (e.querySelector('url') || {}).textContent || '#',
+        url,
+        img: POST_IMGS[url] || null,
         desc,
         tags
       };
@@ -246,7 +266,11 @@ date: 2026-04-02
       card.href = item.url;
       card.className = 'ex-card' + (hidden ? ' ex-hidden' : '');
       card.dataset.tags = JSON.stringify(item.tags || []);
+      const imgHtml = item.img
+        ? `<img class="ex-card-img" src="${escHtml(item.img)}" alt="${escHtml(item.title)}" loading="lazy" onerror="this.style.display='none'">`
+        : '';
       card.innerHTML = `
+        ${imgHtml}
         <span class="ex-badge ex-badge-${item.type}">${item.type === 'blog' ? 'Blog' : 'Project'}</span>
         <p class="ex-card-title">${escHtml(item.title)}</p>
         <p class="ex-card-desc">${escHtml(item.desc)}</p>

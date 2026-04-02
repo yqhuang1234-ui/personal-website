@@ -7,6 +7,7 @@ tags:
   - survival-analysis
 categories:
   - Learning Notes
+index_img: /img/posts/survival-analysis.jpg
 math: false
 excerpt: >
   Survival analysis is one of the first methods a biostatistics student

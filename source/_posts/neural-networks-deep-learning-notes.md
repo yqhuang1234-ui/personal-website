@@ -6,6 +6,7 @@ tags:
   - neural-networks
 categories:
   - Deep Learning
+index_img: /img/posts/neural-networks.jpg
 excerpt: >
   Interactive notes on neural network fundamentals: activation functions, backpropagation, tensor dimensions, and annotated network diagrams.
 ---
