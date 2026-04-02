@@ -23,6 +23,10 @@ jobs:
     name: Build & Deploy
     runs-on: ubuntu-latest  # GitHub provides a free Linux server to run this
 
+    # Grant the workflow permission to push the built site to gh-pages branch
+    permissions:
+      contents: write
+
     steps:
       # Step 1 — Check out your source code onto the server
       - name: Checkout source
