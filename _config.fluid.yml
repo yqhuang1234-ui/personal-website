@@ -317,11 +317,3 @@ lazyload:
   offset_factor: 2
 
 
-#---------------------------
-# Custom Inject
-#---------------------------
-inject:
-  head:
-    - <link rel="stylesheet" href="/css/home-explore.css">
-  script:
-    - <script src="/js/home-explore.js" defer></script>
