@@ -268,12 +268,7 @@ date: 2026-04-02 05:12:39
 <div class="ab-art-grid">
 
   <div class="ab-art-card">
-    <!-- To add your photo, replace the placeholder div with:
-         <img class="ab-art-img" src="/img/artwork/watercolor.jpg" alt="Watercolor painting"> -->
-    <div class="ab-art-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span>Photo coming soon</span>
-    </div>
+    <img class="ab-art-img" src="/img/artwork/watercolor.jpg" alt="Watercolor painting">
     <div class="ab-art-body">
       <p class="ab-art-label">Watercolor</p>
       <p class="ab-art-caption">Loose, expressive, and a little unpredictable — just like data.</p>
@@ -281,12 +276,7 @@ date: 2026-04-02 05:12:39
   </div>
 
   <div class="ab-art-card">
-    <!-- To add your photo, replace the placeholder div with:
-         <img class="ab-art-img" src="/img/artwork/crochet.jpg" alt="Crochet work"> -->
-    <div class="ab-art-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="3" cy="3" width="18" height="18" rx="2"/><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span>Photo coming soon</span>
-    </div>
+    <img class="ab-art-img" src="/img/artwork/crochet.jpg" alt="Crochet work">
     <div class="ab-art-body">
       <p class="ab-art-label">Crochet</p>
       <p class="ab-art-caption">Repetition with variation — a pattern that's never quite the same twice.</p>
@@ -294,12 +284,7 @@ date: 2026-04-02 05:12:39
   </div>
 
   <div class="ab-art-card">
-    <!-- To add your photo, replace the placeholder div with:
-         <img class="ab-art-img" src="/img/artwork/sewing.jpg" alt="Sewing project"> -->
-    <div class="ab-art-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span>Photo coming soon</span>
-    </div>
+    <img class="ab-art-img" src="/img/artwork/sewing.jpg" alt="Sewing project">
     <div class="ab-art-body">
       <p class="ab-art-label">Sewing</p>
       <p class="ab-art-caption">Precision and patience — measuring twice, cutting once.</p>
@@ -316,12 +301,7 @@ date: 2026-04-02 05:12:39
 <div class="ab-art-grid">
 
   <div class="ab-art-card">
-    <!-- To add your photo, replace the placeholder div with:
-         <img class="ab-art-img" src="/img/outdoors/hiking.jpg" alt="Hiking"> -->
-    <div class="ab-art-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span>Photo coming soon</span>
-    </div>
+    <img class="ab-art-img" src="/img/outdoors/hiking.jpg" alt="Hiking">
     <div class="ab-art-body">
       <p class="ab-art-label">🥾 Hiking</p>
       <p class="ab-art-caption">Where I do my best thinking — the further from a screen, the better.</p>
@@ -329,12 +309,7 @@ date: 2026-04-02 05:12:39
   </div>
 
   <div class="ab-art-card">
-    <!-- To add your photo, replace the placeholder div with:
-         <img class="ab-art-img" src="/img/outdoors/biking.jpg" alt="Biking"> -->
-    <div class="ab-art-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span>Photo coming soon</span>
-    </div>
+    <img class="ab-art-img" src="/img/outdoors/biking.jpg" alt="Biking">
     <div class="ab-art-body">
       <p class="ab-art-label">🚴 Biking</p>
       <p class="ab-art-caption">Long rides, open roads, and a very optimistic sense of distance.</p>
@@ -342,12 +317,7 @@ date: 2026-04-02 05:12:39
   </div>
 
   <div class="ab-art-card">
-    <!-- To add your photo, replace the placeholder div with:
-         <img class="ab-art-img" src="/img/outdoors/marathon.jpg" alt="Half Marathon"> -->
-    <div class="ab-art-placeholder">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span>Photo coming soon</span>
-    </div>
+    <img class="ab-art-img" src="/img/outdoors/marathon.jpg" alt="Half Marathon">
     <div class="ab-art-body">
       <p class="ab-art-label">🏃 Half Marathon</p>
       <p class="ab-art-caption">Once a year — the only deadline I never miss.</p>
