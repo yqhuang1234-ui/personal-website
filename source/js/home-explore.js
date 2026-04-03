@@ -7,6 +7,7 @@
   function init() {
     var board = document.getElementById('board');
     if (!board) return;
+    var target = board.querySelector('.col-md-10') || board;
 
     /* Build section HTML */
     var section = document.createElement('div');
@@ -17,7 +18,7 @@
       '<div class="ex-tag-bar" id="ex-tag-bar-home"><span class="ex-loading">Loading tags\u2026</span></div>' +
       '<div class="ex-grid" id="ex-grid-home"><div class="ex-loading">Loading content\u2026</div></div>';
 
-    board.appendChild(section);
+    target.appendChild(section);
 
     /* ── Cover image lookup (keyed by post URL) ─────────────────── */
     var POST_IMGS = {
