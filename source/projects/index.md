@@ -229,9 +229,7 @@ date: 2026-04-02 06:21:26
       reproducible PDF report with baseline characteristic tables, odds ratio estimates, and risk visualizations.
     </p>
     <div class="project-img-wrap">
-      <!-- To add a photo: replace the placeholder div with:
-           <img src="/img/projects/surgery-timing.jpg" alt="Surgery Timing project"> -->
-      <div class="project-img-placeholder">📷 Photo coming soon</div>
+      <img src="/img/projects/surgery-timing.jpg" alt="Surgery Timing project">
     </div>
     <div class="project-tags">
       <span class="tag">R</span>
@@ -258,9 +256,7 @@ date: 2026-04-02 06:21:26
       breaks down and robust standard errors are needed.
     </p>
     <div class="project-img-wrap">
-      <!-- To add a photo: replace the placeholder div with:
-           <img src="/img/projects/monte-carlo-sim.jpg" alt="Monte Carlo Simulation project"> -->
-      <div class="project-img-placeholder">📷 Photo coming soon</div>
+      <img src="/img/projects/monte-carlo-sim.jpg" alt="Monte Carlo Simulation project">
     </div>
     <div class="project-tags">
       <span class="tag">R</span>
