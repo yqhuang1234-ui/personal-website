@@ -54,7 +54,8 @@
         var tags = Array.from(e.querySelectorAll('tags tag')).map(function (t) { return t.textContent.trim(); });
         var content = (e.querySelector('content') || {}).textContent || '';
         var desc = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
-        var url = (e.querySelector('url') || {}).textContent || '#';
+        var rawUrl = (e.querySelector('url') || {}).textContent || '#';
+        var url = rawUrl.replace(/^https?:\/\/[^\/]+/, '') || rawUrl;
         return {
           type: 'blog',
           title: (e.querySelector('title') || {}).textContent || 'Untitled',
