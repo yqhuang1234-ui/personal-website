@@ -9,6 +9,15 @@
     if (!board) return;
     var target = board.querySelector('.col-md-10') || board;
 
+    /* ── Recent Blog heading ─────────────────────────────────────── */
+    var firstCard = target.querySelector('.index-card');
+    if (firstCard) {
+      var recentHeading = document.createElement('h2');
+      recentHeading.className = 'ex-recent-heading';
+      recentHeading.textContent = 'Recent Blog';
+      target.insertBefore(recentHeading, firstCard);
+    }
+
     /* Build section HTML */
     var section = document.createElement('div');
     section.className = 'ex-home-section';

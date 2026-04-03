@@ -1,5 +1,14 @@
 /* ── Explore section on home page — namespace: ex- ─────────────── */
 
+.ex-recent-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e0e4ea;
+}
+
 .ex-home-section {
   margin-top: 2.5rem;
   padding: 0 0 1.5rem;
@@ -162,6 +171,7 @@
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
+  .ex-recent-heading  { color: #c4c6c9; border-color: #435266; }
   .ex-home-section h2 { color: #c4c6c9; border-color: #435266; }
   .ex-intro       { color: #a7a9ad; }
   .ex-pill        { color: #c4c6c9; border-color: #435266; }
