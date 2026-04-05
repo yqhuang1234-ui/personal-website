@@ -232,6 +232,7 @@ date: 2026-04-02 06:21:26
       <img src="/img/projects/surgery-timing.jpg" alt="Surgery Timing project">
     </div>
     <div class="project-tags">
+      <span class="tag">statistics</span>
       <span class="tag">R</span>
       <span class="tag">Logistic Regression</span>
       <span class="tag">Restricted Cubic Splines</span>
@@ -259,8 +260,9 @@ date: 2026-04-02 06:21:26
       <img src="/img/projects/monte-carlo-sim.jpg" alt="Monte Carlo Simulation project">
     </div>
     <div class="project-tags">
+      <span class="tag">statistics</span>
       <span class="tag">R</span>
-      <span class="tag">Monte Carlo Simulation</span>
+      <span class="tag">Simulation</span>
       <span class="tag">OLS Regression</span>
       <span class="tag">ggplot2</span>
       <span class="tag">bookdown</span>
