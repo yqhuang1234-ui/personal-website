@@ -235,14 +235,14 @@ date: 2026-04-02 05:12:39
 <div class="ab-timeline">
 
   <div class="ab-step">
-    <p class="ab-step-year">2019 – 2020</p>
+    <p class="ab-step-year">2017 – 2018</p>
     <p class="ab-step-title">Master of Business Analytics (University of Maryland)</p>
     <p class="ab-step-desc">Built the technical foundation — statistics, machine learning, data engineering. Learned to turn messy data into decisions.</p>
   </div>
 
   <div class="ab-step">
-    <p class="ab-step-year">2020 – 2025 · 6 years</p>
-    <p class="ab-step-title">Data Scientist — Industry</p>
+    <p class="ab-step-year">2018 – 2025 </p>
+    <p class="ab-step-title">Data Scientist (Hughes, Altria)</p>
     <p class="ab-step-desc">Shipped ML models in production, worked with large-scale datasets, and developed intuition for what breaks in the real world.</p>
   </div>
 
