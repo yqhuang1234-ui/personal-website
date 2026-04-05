@@ -2,7 +2,7 @@
 title: Getting Started with Survival Analysis in R
 date: 2026-04-02 05:49:32
 tags:
-  - learning-notes
+  - statistics
   - R
   - survival-analysis
 categories:
