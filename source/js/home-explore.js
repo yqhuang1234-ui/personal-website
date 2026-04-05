@@ -43,7 +43,7 @@
         url: '/projects/',
         img: '/img/projects/surgery-timing.jpg',
         desc: 'Investigates whether the hour of day a surgery is performed correlates with 30-day patient mortality. Applies logistic regression with restricted cubic splines to 32,001 surgical cases.',
-        tags: ['statistics', 'R', 'logistic-regression']
+        tags: ['statistics', 'R', 'logistic-regression', 'Projects']
       },
       {
         type: 'project',
@@ -51,7 +51,7 @@
         url: '/projects/',
         img: '/img/projects/monte-carlo-sim.jpg',
         desc: 'A Monte Carlo simulation study (1,000 repetitions) examining how heteroscedasticity violations affect OLS regression inference across four error-variance intensity levels.',
-        tags: ['statistics', 'R', 'simulation']
+        tags: ['statistics', 'R', 'simulation', 'Projects']
       }
     ];
 
@@ -62,6 +62,8 @@
       var entries = Array.from(doc.querySelectorAll('entry'));
       return entries.map(function (e) {
         var tags = Array.from(e.querySelectorAll('tags tag')).map(function (t) { return t.textContent.trim(); });
+        var cats = Array.from(e.querySelectorAll('categories category')).map(function (c) { return c.textContent.trim(); });
+        tags = tags.concat(cats.filter(function (c) { return !tags.includes(c); }));
         var content = (e.querySelector('content') || {}).textContent || '';
         var desc = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
         var rawUrl = (e.querySelector('url') || {}).textContent || '#';
