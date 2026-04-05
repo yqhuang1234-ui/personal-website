@@ -236,7 +236,7 @@ date: 2026-04-02 05:12:39
 
   <div class="ab-step">
     <p class="ab-step-year">2019 – 2020</p>
-    <p class="ab-step-title">Master of Business Analytics</p>
+    <p class="ab-step-title">Master of Business Analytics (University of Maryland)</p>
     <p class="ab-step-desc">Built the technical foundation — statistics, machine learning, data engineering. Learned to turn messy data into decisions.</p>
   </div>
 
@@ -248,7 +248,7 @@ date: 2026-04-02 05:12:39
 
   <div class="ab-step">
     <p class="ab-step-year">2025 – Present</p>
-    <p class="ab-step-title">M.S. Biostatistics</p>
+    <p class="ab-step-title">M.S. Biostatistics (CU Anschutz medical campus)</p>
     <p class="ab-step-desc">Bringing data science into the biomedical world — rigorous methods, clinical data, and the math behind why things work.</p>
   </div>
 
@@ -341,20 +341,4 @@ date: 2026-04-02 05:12:39
 
 ---
 
-<div class="ab-section">
-<p class="ab-section-title">Education</p>
-<div class="ab-edu">
-  <div>
-    <p class="ab-edu-degree">M.S. in Biostatistics <em>(2025 – Present)</em></p>
-    <p class="ab-edu-meta">Statistical methods · ML applications in biomedicine · PhD track</p>
-  </div>
-  <div>
-    <p class="ab-edu-degree">Master of Business Analytics <em>(2019 – 2020)</em></p>
-    <p class="ab-edu-meta">Statistics · Machine learning · Data engineering</p>
-  </div>
-</div>
-</div>
-
----
-
-I'm always happy to talk research, statistics, or PhD programs — reach me at **[yqhuang1234@gmail.com](mailto:yqhuang1234@gmail.com)** or on [GitHub](https://github.com/yqhuang1234-ui).
+I'm always happy to connect - reach me at **[yqhuang1234@gmail.com](mailto:yqhuang1234@gmail.com)** or on [GitHub](https://github.com/yqhuang1234-ui).
