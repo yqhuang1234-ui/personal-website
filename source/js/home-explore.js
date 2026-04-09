@@ -51,7 +51,7 @@
         url: '/projects/',
         img: '/img/projects/monte-carlo-sim.jpg',
         desc: 'A Monte Carlo simulation study (1,000 repetitions) examining how heteroscedasticity violations affect OLS regression inference across four error-variance intensity levels.',
-        tags: ['statistics', 'R', 'simulation', 'ols-regression', 'ggplot2', 'bookdown', 'projects']
+        tags: ['statistics', 'R', 'simulation', 'ols-regression', 'ggplot2', 'projects']
       }
     ];
 
