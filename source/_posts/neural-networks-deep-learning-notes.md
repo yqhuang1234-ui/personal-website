@@ -5,6 +5,7 @@ tags:
   - machine-learning
   - deep-learning
   - neural-networks
+  - learning-notes
 categories:
   - Learning Notes
 index_img: /img/posts/neural-networks.jpg
