@@ -43,7 +43,7 @@
         url: '/projects/',
         img: '/img/projects/surgery-timing.jpg',
         desc: 'Investigates whether the hour of day a surgery is performed correlates with 30-day patient mortality. Applies logistic regression with restricted cubic splines to 32,001 surgical cases.',
-        tags: ['statistics', 'R', 'logistic-regression', 'projects']
+        tags: ['statistics', 'R', 'logistic-regression', 'restricted-cubic-splines', 'ggplot2', 'gtsummary', 'projects']
       },
       {
         type: 'project',
@@ -51,7 +51,7 @@
         url: '/projects/',
         img: '/img/projects/monte-carlo-sim.jpg',
         desc: 'A Monte Carlo simulation study (1,000 repetitions) examining how heteroscedasticity violations affect OLS regression inference across four error-variance intensity levels.',
-        tags: ['statistics', 'R', 'simulation', 'projects']
+        tags: ['statistics', 'R', 'simulation', 'ols-regression', 'ggplot2', 'bookdown', 'projects']
       }
     ];
 
