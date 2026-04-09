@@ -234,8 +234,8 @@ date: 2026-04-02 06:21:26
     <div class="project-tags">
       <span class="tag">statistics</span>
       <span class="tag">R</span>
-      <span class="tag">Logistic Regression</span>
-      <span class="tag">Restricted Cubic Splines</span>
+      <span class="tag">logistic-regression</span>
+      <span class="tag">restricted-cubic-splines</span>
       <span class="tag">ggplot2</span>
       <span class="tag">gtsummary</span>
     </div>
@@ -262,8 +262,8 @@ date: 2026-04-02 06:21:26
     <div class="project-tags">
       <span class="tag">statistics</span>
       <span class="tag">R</span>
-      <span class="tag">Simulation</span>
-      <span class="tag">OLS Regression</span>
+      <span class="tag">simulation</span>
+      <span class="tag">ols-regression</span>
       <span class="tag">ggplot2</span>
       <span class="tag">bookdown</span>
     </div>

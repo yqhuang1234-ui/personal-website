@@ -6,7 +6,7 @@ tags:
   - R
   - survival-analysis
 categories:
-  - Learning Notes
+  - Statistics
 index_img: /img/posts/survival-analysis.jpg
 math: false
 excerpt: >
