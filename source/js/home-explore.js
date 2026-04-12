@@ -56,26 +56,6 @@
       '/2026/04/02/Getting-Started-with-Survival-Analysis-in-R/': '/img/posts/survival-analysis.jpg'
     };
 
-    /* ── Hardcoded project data ──────────────────────────────────── */
-    var PROJECTS = [
-      {
-        type: 'project',
-        title: 'Surgery Timing and 30-Day Mortality Outcomes',
-        url: '/projects/',
-        img: '/img/projects/surgery-timing.jpg',
-        desc: 'Investigates whether the hour of day a surgery is performed correlates with 30-day patient mortality. Applies logistic regression with restricted cubic splines to 32,001 surgical cases.',
-        tags: ['statistics', 'R', 'logistic-regression', 'projects']
-      },
-      {
-        type: 'project',
-        title: 'OLS Under Heteroscedasticity: A Monte Carlo Simulation',
-        url: '/projects/',
-        img: '/img/projects/monte-carlo-sim.jpg',
-        desc: 'A Monte Carlo simulation study (1,000 repetitions) examining how heteroscedasticity violations affect OLS regression inference across four error-variance intensity levels.',
-        tags: ['statistics', 'R', 'simulation', 'projects']
-      }
-    ];
-
     /* ── Parse local-search.xml → post items ────────────────────── */
     function parsePosts(xmlText) {
       var parser = new DOMParser();
@@ -177,18 +157,25 @@
     }
 
     /* ── Bootstrap ───────────────────────────────────────────────── */
-    fetch('/local-search.xml')
-      .then(function (r) { return r.text(); })
-      .then(function (xml) {
-        var posts = parsePosts(xml);
-        var allItems = posts.concat(PROJECTS);
-        renderTagBar(buildTagMap(allItems));
-        renderCards(allItems);
-      })
-      .catch(function () {
-        renderTagBar(buildTagMap(PROJECTS));
-        renderCards(PROJECTS);
+    Promise.all([
+      fetch('/local-search.xml').then(function (r) { return r.text(); }).catch(function () { return null; }),
+      fetch('/projects-data.json').then(function (r) { return r.json(); }).catch(function () { return []; })
+    ]).then(function (results) {
+      var posts = results[0] ? parsePosts(results[0]) : [];
+      var projectItems = (results[1] || []).map(function (p) {
+        return {
+          type: 'project',
+          title: p.title,
+          url: '/projects/',
+          img: p.img || null,
+          desc: p.desc,
+          tags: (p.tags || []).concat(['projects'])
+        };
       });
+      var allItems = posts.concat(projectItems);
+      renderTagBar(buildTagMap(allItems));
+      renderCards(allItems);
+    });
   }
 
   if (document.readyState === 'loading') {

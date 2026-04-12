@@ -275,56 +275,48 @@ html[data-user-color-scheme="dark"] .project-img-placeholder {
 }
 </style>
 
-<div class="projects-grid">
+<div class="projects-grid" id="projects-grid"></div>
 
-  <div class="project-card">
-    <div class="project-header">
-      <h3 class="project-title">Surgery Timing and 30-Day Mortality Outcomes</h3>
-      <span class="project-date">Nov 2025</span>
-    </div>
-    <p class="project-desc">
-      Investigates whether the hour of day a surgery is performed correlates with 30-day patient mortality.
-      Applies logistic regression with restricted cubic splines to 32,001 surgical cases, capturing non-linear
-      timing effects while adjusting for patient comorbidities and procedure classification. Produces a
-      reproducible PDF report with baseline characteristic tables, odds ratio estimates, and risk visualizations.
-    </p>
-    <div class="project-img-wrap">
-      <img src="/img/projects/surgery-timing.jpg" alt="Surgery Timing project">
-    </div>
-    <div class="project-tags">
-      <span class="tag">statistics</span>
-      <span class="tag">R</span>
-      <span class="tag">logistic-regression</span>
-    </div>
-    <div class="project-links">
-      <a class="btn btn-primary" href="https://github.com/yqhuang1234-ui/surgery_timing_outcome" target="_blank" rel="noopener">View Code</a>
-      <a class="btn btn-outline" href="https://github.com/yqhuang1234-ui/surgery_timing_outcome/blob/c77953e5f38a14e208dad83299d162daeca90d78/2025-12-02_report-only_surgery-timing-outcome_yanqi-huang.pdf" target="_blank" rel="noopener">View Report</a>
-    </div>
-  </div>
+<script>
+(function () {
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
 
-  <div class="project-card">
-    <div class="project-header">
-      <h3 class="project-title">OLS Under Heteroscedasticity: A Monte Carlo Simulation</h3>
-      <span class="project-date">Oct 2025</span>
-    </div>
-    <p class="project-desc">
-      A Monte Carlo simulation study (1,000 repetitions) examining how heteroscedasticity violations affect
-      OLS regression inference. Evaluates estimator bias, standard error accuracy, and confidence interval
-      coverage across four error-variance intensity levels, showing when and why classical OLS inference
-      breaks down and robust standard errors are needed.
-    </p>
-    <div class="project-img-wrap">
-      <img src="/img/projects/monte-carlo-sim.jpg" alt="Monte Carlo Simulation project">
-    </div>
-    <div class="project-tags">
-      <span class="tag">statistics</span>
-      <span class="tag">R</span>
-      <span class="tag">simulation</span>
-    </div>
-    <div class="project-links">
-      <a class="btn btn-primary" href="https://github.com/yqhuang1234-ui/simulation-study" target="_blank" rel="noopener">View Code</a>
-      <a class="btn btn-outline" href="https://github.com/yqhuang1234-ui/simulation-study/blob/main/10-24-25_yanqi-huang_simulation-report_only.pdf" target="_blank" rel="noopener">View Report</a>
-    </div>
-  </div>
+  function renderProjects(data) {
+    var grid = document.getElementById('projects-grid');
+    if (!grid) return;
+    grid.innerHTML = data.map(function (p) {
+      var imgHtml = p.img
+        ? '<div class="project-img-wrap"><img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy"></div>'
+        : '<div class="project-img-placeholder">No image</div>';
+      var tagsHtml = (p.tags || []).map(function (t) {
+        return '<span class="tag">' + esc(t) + '</span>';
+      }).join('');
+      var linksHtml = (p.links || []).map(function (l) {
+        return '<a class="btn btn-' + esc(l.style) + '" href="' + esc(l.href) + '" target="_blank" rel="noopener">' + esc(l.label) + '</a>';
+      }).join('');
+      return '<div class="project-card">'
+        + '<div class="project-header">'
+        + '<h3 class="project-title">' + esc(p.title) + '</h3>'
+        + '<span class="project-date">' + esc(p.date) + '</span>'
+        + '</div>'
+        + '<p class="project-desc">' + esc(p.desc) + '</p>'
+        + imgHtml
+        + '<div class="project-tags">' + tagsHtml + '</div>'
+        + '<div class="project-links">' + linksHtml + '</div>'
+        + '</div>';
+    }).join('');
+  }
 
-</div>
+  fetch('/projects-data.json')
+    .then(function (r) { return r.json(); })
+    .then(renderProjects)
+    .catch(function () {
+      var grid = document.getElementById('projects-grid');
+      if (grid) grid.innerHTML = '<p>Could not load projects.</p>';
+    });
+})();
+</script>
