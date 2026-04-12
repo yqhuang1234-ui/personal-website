@@ -115,57 +115,108 @@ date: 2026-04-02 06:21:26
   border-color: #1e3f80;
 }
 
-/* Dark mode */
+/* Dark mode — auto (OS preference, no manual override) */
 @media (prefers-color-scheme: dark) {
-  .project-card {
+  html:not([data-user-color-scheme]) .project-card {
     background: #252d38;
     border-color: #435266;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .project-card:hover {
+  html:not([data-user-color-scheme]) .project-card:hover {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
   }
 
-  .project-title {
+  html:not([data-user-color-scheme]) .project-title {
     color: #c4c6c9;
   }
 
-  .project-date {
+  html:not([data-user-color-scheme]) .project-date {
     color: #6b7f92;
   }
 
-  .project-desc {
+  html:not([data-user-color-scheme]) .project-desc {
     color: #a7a9ad;
   }
 
-  .tag {
+  html:not([data-user-color-scheme]) .tag {
     background: #364151;
     color: #5b8ef0;
   }
 
-  .btn-primary {
+  html:not([data-user-color-scheme]) .btn-primary {
     background: #3d5166;
     border-color: #3d5166;
     color: #e8ecf0;
   }
 
-  .btn-primary:hover {
+  html:not([data-user-color-scheme]) .btn-primary:hover {
     background: #4a6278;
     border-color: #4a6278;
     color: #ffffff;
   }
 
-  .btn-outline {
+  html:not([data-user-color-scheme]) .btn-outline {
     color: #5b8ef0;
     border-color: #5b8ef0;
   }
 
-  .btn-outline:hover {
+  html:not([data-user-color-scheme]) .btn-outline:hover {
     background: #364151;
     color: #7aaef5;
     border-color: #7aaef5;
   }
+}
+
+/* Dark mode — manual toggle */
+html[data-user-color-scheme="dark"] .project-card {
+  background: #252d38;
+  border-color: #435266;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+html[data-user-color-scheme="dark"] .project-card:hover {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+html[data-user-color-scheme="dark"] .project-title {
+  color: #c4c6c9;
+}
+
+html[data-user-color-scheme="dark"] .project-date {
+  color: #6b7f92;
+}
+
+html[data-user-color-scheme="dark"] .project-desc {
+  color: #a7a9ad;
+}
+
+html[data-user-color-scheme="dark"] .tag {
+  background: #364151;
+  color: #5b8ef0;
+}
+
+html[data-user-color-scheme="dark"] .btn-primary {
+  background: #3d5166;
+  border-color: #3d5166;
+  color: #e8ecf0;
+}
+
+html[data-user-color-scheme="dark"] .btn-primary:hover {
+  background: #4a6278;
+  border-color: #4a6278;
+  color: #ffffff;
+}
+
+html[data-user-color-scheme="dark"] .btn-outline {
+  color: #5b8ef0;
+  border-color: #5b8ef0;
+}
+
+html[data-user-color-scheme="dark"] .btn-outline:hover {
+  background: #364151;
+  color: #7aaef5;
+  border-color: #7aaef5;
 }
 
 /* Project image */
@@ -195,11 +246,17 @@ date: 2026-04-02 06:21:26
 }
 
 @media (prefers-color-scheme: dark) {
-  .project-img-placeholder {
+  html:not([data-user-color-scheme]) .project-img-placeholder {
     background: #2e3848;
     color: #687582;
     border-color: #435266;
   }
+}
+
+html[data-user-color-scheme="dark"] .project-img-placeholder {
+  background: #2e3848;
+  color: #687582;
+  border-color: #435266;
 }
 
 /* Mobile */
