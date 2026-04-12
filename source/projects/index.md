@@ -293,8 +293,8 @@ html[data-user-color-scheme="dark"] .project-img-placeholder {
     if (!grid) return;
     grid.innerHTML = data.map(function (p) {
       var imgHtml = p.img
-        ? '<div class="project-img-wrap"><img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy"></div>'
-        : '<div class="project-img-placeholder">No image</div>';
+        ? '<div class="project-img-wrap"><img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>'
+        : '';
       var tagsHtml = (p.tags || []).map(function (t) {
         return '<span class="tag">' + esc(t) + '</span>';
       }).join('');
