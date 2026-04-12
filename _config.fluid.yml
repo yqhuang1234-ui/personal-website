@@ -258,8 +258,8 @@ post:
     options: { theme: 'default' }
 
   comments:
-    enable: false
-    type: disqus
+    enable: true
+    type: utterances
 
 
 #---------------------------
@@ -306,6 +306,16 @@ page404:
   banner_mask_alpha: 0.4
   redirect_delay: 5000
 
+
+#---------------------------
+# Utterances Comments
+#---------------------------
+utterances:
+  repo: yqhuang1234-ui/yqhuang1234-ui.github.io
+  issue_term: pathname
+  label: utterances
+  theme: github-light
+  theme_dark: github-dark
 
 #---------------------------
 # Lazyload

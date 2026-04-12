@@ -29,6 +29,27 @@
 
     target.appendChild(section);
 
+    /* ── Comments section ────────────────────────────────────────── */
+    var commentsSection = document.createElement('div');
+    commentsSection.className = 'ex-home-section';
+    commentsSection.innerHTML =
+      '<h2>Comments</h2>' +
+      '<article id="home-comments"></article>';
+    target.appendChild(commentsSection);
+
+    window.UtterancesThemeLight = 'github-light';
+    window.UtterancesThemeDark = 'github-dark';
+    var utterTheme = document.documentElement.getAttribute('data-user-color-scheme') === 'dark'
+      ? 'github-dark' : 'github-light';
+    var utterScript = document.createElement('script');
+    utterScript.setAttribute('src', 'https://utteranc.es/client.js');
+    utterScript.setAttribute('repo', 'yqhuang1234-ui/yqhuang1234-ui.github.io');
+    utterScript.setAttribute('issue-term', 'pathname');
+    utterScript.setAttribute('label', 'utterances');
+    utterScript.setAttribute('theme', utterTheme);
+    utterScript.setAttribute('crossorigin', 'anonymous');
+    document.getElementById('home-comments').appendChild(utterScript);
+
     /* ── Cover image lookup (keyed by post URL) ─────────────────── */
     var POST_IMGS = {
       '/2026/04/02/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
