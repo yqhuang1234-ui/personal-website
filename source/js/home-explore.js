@@ -52,7 +52,7 @@
 
     /* ── Cover image lookup (keyed by post URL) ─────────────────── */
     var POST_IMGS = {
-      '/2026/04/02/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
+      '/2026/04/03/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
       '/2026/04/02/Getting-Started-with-Survival-Analysis-in-R/': '/img/posts/survival-analysis.jpg'
     };
 

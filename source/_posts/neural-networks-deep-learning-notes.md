@@ -1,6 +1,6 @@
 ---
 title: "Neural Networks and Deep Learning – Course Notes"
-date: 2026-04-02 12:00:00
+date: 2026-04-03 12:00:00
 tags:
   - machine-learning
   - deep-learning
