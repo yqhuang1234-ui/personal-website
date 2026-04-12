@@ -69,11 +69,21 @@
   gap: 1.1rem;
 }
 
+/* Card shake animation */
+@keyframes ex-card-shake {
+  0%   { transform: translateY(0)    rotate(0deg);    }
+  20%  { transform: translateY(-4px) rotate(-1.2deg); }
+  40%  { transform: translateY(-3px) rotate(1deg);    }
+  60%  { transform: translateY(-4px) rotate(-0.6deg); }
+  80%  { transform: translateY(-3px) rotate(0.3deg);  }
+  100% { transform: translateY(-3px) rotate(0deg);    }
+}
+
 /* Card */
 .ex-card {
   background: #fff;
   border: 1px solid #e0e4ea;
-  border-radius: 6px;
+  border-radius: 14px;
   padding: 1.1rem 1.25rem 1rem;
   display: flex;
   flex-direction: column;
@@ -87,7 +97,8 @@
 
 .ex-card:hover {
   border-color: #2a5298;
-  box-shadow: 0 3px 12px rgba(42,82,152,0.12);
+  box-shadow: 0 8px 20px rgba(42,82,152,0.13);
+  animation: ex-card-shake 0.38s ease forwards;
 }
 
 .ex-card.ex-hidden {
