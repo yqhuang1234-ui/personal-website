@@ -189,8 +189,6 @@ index:
     enable: true
     text:
       - "Keep showing up."
-      - "Machine Learning · Deep Learning · Methods for Biomedicine."
-      - "Also: Watercolor. Crochet. Half marathons."
   auto_excerpt:
     enable: true
   post_url_target: _self
