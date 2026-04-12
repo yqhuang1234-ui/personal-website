@@ -312,6 +312,10 @@ html[data-user-color-scheme="dark"] .project-img-placeholder {
         + '<div class="project-links">' + linksHtml + '</div>'
         + '</div>';
     }).join('');
+
+    if (window.Fluid && window.Fluid.plugins && typeof window.Fluid.plugins.fancyBox === 'function') {
+      window.Fluid.plugins.fancyBox('#projects-grid :not(a) > img');
+    }
   }
 
   fetch('/projects-data.json')
