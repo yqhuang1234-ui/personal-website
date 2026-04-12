@@ -2,9 +2,8 @@
 title: Getting Started with Survival Analysis in R
 date: 2026-04-02 05:49:32
 tags:
-  - statistics
-  - R
   - survival-analysis
+  - blog
 categories:
   - Statistics
 index_img: /img/posts/survival-analysis.jpg

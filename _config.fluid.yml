@@ -50,8 +50,8 @@ fun_features:
 
 # Dark mode
 dark_mode:
-  enable: true
-  default: light             # default to light; reader can toggle
+  enable: false
+  default: light             # fixed light mode; no reader toggle
 
 # Color scheme — Anthropic × Notion inspired
 color:

@@ -232,6 +232,16 @@ html[data-user-color-scheme="dark"] .btn-outline:hover {
   overflow: hidden;
 }
 
+.project-img-trigger {
+  display: block;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
 .project-img-wrap img {
   width: 100%;
   max-height: 220px;
@@ -239,30 +249,54 @@ html[data-user-color-scheme="dark"] .btn-outline:hover {
   display: block;
 }
 
-.project-img-placeholder {
-  height: 160px;
-  background: #F5F0E8;
-  border-radius: 6px;
-  display: flex;
+/* Page-local lightbox keeps popup stable on this page without external plugin deps. */
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.82);
+  display: none;
   align-items: center;
   justify-content: center;
-  font-size: 0.82rem;
-  color: #9B9288;
-  border: 1px dashed #D8D0C4;
+  padding: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not([data-user-color-scheme]) .project-img-placeholder {
-    background: #2A2A2A;
-    color: #555555;
-    border-color: #363636;
-  }
+.project-lightbox.is-open {
+  display: flex;
 }
 
-html[data-user-color-scheme="dark"] .project-img-placeholder {
-  background: #2A2A2A;
-  color: #555555;
-  border-color: #363636;
+.project-lightbox-img {
+  max-width: min(1100px, 92vw);
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.35);
+}
+
+.project-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #1A1A1A;
+  background: #F5EDE6;
+}
+
+.project-lightbox-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  color: #F0EBE1;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 /* Mobile */
@@ -280,6 +314,12 @@ html[data-user-color-scheme="dark"] .project-img-placeholder {
 
 <div class="projects-grid" id="projects-grid"></div>
 
+<div class="project-lightbox" id="project-lightbox" aria-hidden="true">
+  <button class="project-lightbox-close" id="project-lightbox-close" type="button" aria-label="Close image">×</button>
+  <img class="project-lightbox-img" id="project-lightbox-img" alt="Project image preview">
+  <div class="project-lightbox-caption" id="project-lightbox-caption"></div>
+</div>
+
 <script>
 (function () {
   function esc(s) {
@@ -288,12 +328,57 @@ html[data-user-color-scheme="dark"] .project-img-placeholder {
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  function openLightbox(src, title) {
+    var box = document.getElementById('project-lightbox');
+    var img = document.getElementById('project-lightbox-img');
+    var cap = document.getElementById('project-lightbox-caption');
+    if (!box || !img || !src) return;
+    img.src = src;
+    img.alt = title || 'Project image preview';
+    if (cap) cap.textContent = title || '';
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    var box = document.getElementById('project-lightbox');
+    var img = document.getElementById('project-lightbox-img');
+    if (!box || !img) return;
+    box.classList.remove('is-open');
+    box.setAttribute('aria-hidden', 'true');
+    img.removeAttribute('src');
+    document.body.style.overflow = '';
+  }
+
+  function bindLightboxEvents() {
+    var box = document.getElementById('project-lightbox');
+    var closeBtn = document.getElementById('project-lightbox-close');
+    var grid = document.getElementById('projects-grid');
+    if (!box || !closeBtn || !grid) return;
+
+    closeBtn.addEventListener('click', closeLightbox);
+    box.addEventListener('click', function (e) {
+      if (e.target === box) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && box.classList.contains('is-open')) closeLightbox();
+    });
+
+    grid.addEventListener('click', function (e) {
+      var trigger = e.target.closest('.project-img-trigger');
+      if (!trigger) return;
+      openLightbox(trigger.getAttribute('data-full'), trigger.getAttribute('data-title'));
+    });
+  }
+
   function renderProjects(data) {
     var grid = document.getElementById('projects-grid');
     if (!grid) return;
     grid.innerHTML = data.map(function (p) {
+      var imageTag = '<' + 'img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy" decoding="async" onerror="this.closest(\'.project-img-wrap\').style.display=\'none\'">';
       var imgHtml = p.img
-        ? '<div class="project-img-wrap"><img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>'
+        ? '<div class="project-img-wrap"><button class="project-img-trigger" type="button" data-full="' + esc(p.img) + '" data-title="' + esc(p.title) + '">' + imageTag + '</button></div>'
         : '';
       var tagsHtml = (p.tags || []).map(function (t) {
         return '<span class="tag">' + esc(t) + '</span>';
@@ -313,10 +398,14 @@ html[data-user-color-scheme="dark"] .project-img-placeholder {
         + '</div>';
     }).join('');
 
-    if (window.Fluid && window.Fluid.plugins && typeof window.Fluid.plugins.fancyBox === 'function') {
-      window.Fluid.plugins.fancyBox('#projects-grid :not(a) > img');
-    }
+    // If stale lazyload attributes are present from old builds, normalize immediately.
+    Array.prototype.forEach.call(grid.querySelectorAll('img[lazyload]'), function (img) {
+      img.removeAttribute('lazyload');
+      img.removeAttribute('srcset');
+    });
   }
+
+  bindLightboxEvents();
 
   fetch('/projects-data.json')
     .then(function (r) { return r.json(); })
