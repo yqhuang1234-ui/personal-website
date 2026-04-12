@@ -86,7 +86,7 @@ date: 2026-04-02 05:12:39
 
 .ab-art-card {
   border: 1px solid #e0e4ea;
-  border-radius: 6px;
+  border-radius: 14px;
   overflow: hidden;
   background: #fff;
 }
