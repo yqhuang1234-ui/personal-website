@@ -116,6 +116,14 @@ Topics covered:
   font-weight: 500;
   color: #2a5298;
   margin: 0.35rem 0 0;
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dl-cta:hover {
+  text-decoration: underline;
 }
 
 /* Dark mode */
@@ -158,7 +166,7 @@ Topics covered:
     <div class="dl-body">
       <p class="dl-title">Activation Functions &amp; Gradients</p>
       <p class="dl-desc">Sigmoid, Tanh, ReLU, and Leaky ReLU with interactive gradient visualizations and saturation analysis.</p>
-      <p class="dl-cta">Open &rarr;</p>
+      <a class="dl-cta" href="/deep-learning/activation_functions.html">Open &rarr;</a>
     </div>
   </div>
 
@@ -170,7 +178,7 @@ Topics covered:
     <div class="dl-body">
       <p class="dl-title">Backpropagation — Interactive Deep Dive</p>
       <p class="dl-desc">Chain rule, forward and backward pass, and all six gradient equations with step-by-step walkthrough.</p>
-      <p class="dl-cta">Open &rarr;</p>
+      <a class="dl-cta" href="/deep-learning/backprop_explainer.html">Open &rarr;</a>
     </div>
   </div>
 
@@ -182,7 +190,7 @@ Topics covered:
     <div class="dl-body">
       <p class="dl-title">Neural Network Dimension Checker</p>
       <p class="dl-desc">Interactive tool for computing exact tensor shapes of weights, biases, and activations for any architecture.</p>
-      <p class="dl-cta">Open &rarr;</p>
+      <a class="dl-cta" href="/deep-learning/dimension_checker.html">Open &rarr;</a>
     </div>
   </div>
 
@@ -194,7 +202,7 @@ Topics covered:
     <div class="dl-body">
       <p class="dl-title">Neural Network — Annotated</p>
       <p class="dl-desc">Clickable multi-layer diagram showing weighted-sum and activation computation at every node.</p>
-      <p class="dl-cta">Open &rarr;</p>
+      <a class="dl-cta" href="/deep-learning/neural_network_annotated.html">Open &rarr;</a>
     </div>
   </div>
 
