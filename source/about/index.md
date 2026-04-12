@@ -85,7 +85,7 @@ date: 2026-04-02 05:12:39
 }
 
 .ab-art-card {
-  border: 1px solid #e0e4ea;
+  border: 1px solid #E8E2D9;
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
@@ -93,13 +93,13 @@ date: 2026-04-02 05:12:39
 
 .ab-art-placeholder {
   height: 180px;
-  background: #f4f5f7;
+  background: #F5F0E8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  color: #b0bac4;
+  color: #9B9288;
   font-size: 0.82rem;
 }
 
@@ -123,13 +123,13 @@ date: 2026-04-02 05:12:39
 .ab-art-label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #1A1A1A;
   margin: 0 0 0.2rem;
 }
 
 .ab-art-caption {
   font-size: 0.8rem;
-  color: #5a6a7a;
+  color: #5F5F5F;
   margin: 0;
   line-height: 1.5;
 }
@@ -147,7 +147,7 @@ date: 2026-04-02 05:12:39
   align-items: center;
   gap: 0.5rem;
   font-size: 0.92rem;
-  color: #2c3e50;
+  color: #1A1A1A;
 }
 
 .ab-outdoor-emoji { font-size: 1.3rem; line-height: 1; }
@@ -155,7 +155,7 @@ date: 2026-04-02 05:12:39
 
 .ab-outdoor-sub {
   font-size: 0.875rem;
-  color: #5a6a7a;
+  color: #5F5F5F;
   margin: 0;
   line-height: 1.65;
 }
@@ -168,7 +168,7 @@ date: 2026-04-02 05:12:39
 
 .ab-research-list li {
   font-size: 0.92rem;
-  color: #2c3e50;
+  color: #1A1A1A;
   line-height: 1.7;
   margin-bottom: 0.25rem;
 }
@@ -184,13 +184,13 @@ date: 2026-04-02 05:12:39
 .ab-edu-degree {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #1A1A1A;
   margin: 0 0 0.15rem;
 }
 
 .ab-edu-meta {
   font-size: 0.85rem;
-  color: #5a6a7a;
+  color: #5F5F5F;
   margin: 0;
 }
 
@@ -198,23 +198,23 @@ date: 2026-04-02 05:12:39
 
 /* ── Dark mode ──────────────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
-  .ab-intro             { color: #c4c6c9; }
-  .ab-section-title     { color: #687582; }
-  .ab-timeline          { border-left-color: #435266; }
-  .ab-step::before      { background: #5b8ef0; box-shadow: 0 0 0 2px #5b8ef0; border-color: #252d38; }
-  .ab-step-year         { color: #5b8ef0; }
-  .ab-step-title        { color: #c4c6c9; }
-  .ab-step-desc         { color: #a7a9ad; }
-  .ab-art-card          { background: #252d38; border-color: #435266; }
-  .ab-art-placeholder   { background: #2e3848; color: #687582; }
-  .ab-art-label         { color: #c4c6c9; }
-  .ab-art-caption       { color: #a7a9ad; }
-  .ab-outdoor-item      { color: #c4c6c9; }
-  .ab-outdoor-text      { color: #c4c6c9; }
-  .ab-outdoor-sub       { color: #a7a9ad; }
-  .ab-research-list li  { color: #c4c6c9; }
-  .ab-edu-degree        { color: #c4c6c9; }
-  .ab-edu-meta          { color: #a7a9ad; }
+  .ab-intro             { color: #E8E4DC; }
+  .ab-section-title     { color: #777777; }
+  .ab-timeline          { border-left-color: #363636; }
+  .ab-step::before      { background: #E8917A; box-shadow: 0 0 0 2px #E8917A; border-color: #242424; }
+  .ab-step-year         { color: #E8917A; }
+  .ab-step-title        { color: #E8E4DC; }
+  .ab-step-desc         { color: #9B9288; }
+  .ab-art-card          { background: #242424; border-color: #363636; }
+  .ab-art-placeholder   { background: #2A2A2A; color: #555555; }
+  .ab-art-label         { color: #E8E4DC; }
+  .ab-art-caption       { color: #9B9288; }
+  .ab-outdoor-item      { color: #E8E4DC; }
+  .ab-outdoor-text      { color: #E8E4DC; }
+  .ab-outdoor-sub       { color: #9B9288; }
+  .ab-research-list li  { color: #E8E4DC; }
+  .ab-edu-degree        { color: #E8E4DC; }
+  .ab-edu-meta          { color: #9B9288; }
 }
 
 /* ── Mobile ─────────────────────────────────────────────────────── */

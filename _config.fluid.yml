@@ -45,7 +45,7 @@ fun_features:
   progressbar:
     enable: true
     height_px: 2
-    color: "#2a5298"
+    color: "#CC785C"
     options: { showSpinner: false, trickleSpeed: 100 }
 
 # Dark mode
@@ -53,56 +53,56 @@ dark_mode:
   enable: true
   default: light             # default to light; reader can toggle
 
-# Color scheme — clean, academic, minimal
+# Color scheme — Anthropic × Notion inspired
 color:
-  body_bg_color: "#f2f3f5"
-  body_bg_color_dark: "#181c27"
+  body_bg_color: "#F8F5EF"           # warm cream (Anthropic)
+  body_bg_color_dark: "#191919"      # near-black (Notion)
 
-  navbar_bg_color: "#2c3e50"       # dark slate — professional
-  navbar_bg_color_dark: "#1a2535"
+  navbar_bg_color: "#1A1A1A"         # true dark
+  navbar_bg_color_dark: "#111111"
 
-  navbar_text_color: "#f0f0f0"
-  navbar_text_color_dark: "#d0d0d0"
+  navbar_text_color: "#F0EBE1"       # warm off-white
+  navbar_text_color_dark: "#E8E4DC"
 
-  subtitle_color: "#ffffff"
-  subtitle_color_dark: "#d0d0d0"
+  subtitle_color: "#F0EBE1"
+  subtitle_color_dark: "#E8E4DC"
 
-  text_color: "#2c3e50"
-  text_color_dark: "#c4c6c9"
+  text_color: "#1A1A1A"              # near-black (Notion)
+  text_color_dark: "#E8E4DC"         # warm off-white
 
-  sec_text_color: "#5a6a7a"
-  sec_text_color_dark: "#a7a9ad"
+  sec_text_color: "#5F5F5F"
+  sec_text_color_dark: "#9B9288"
 
-  board_color: "#ffffff"
-  board_color_dark: "#252d38"
+  board_color: "#FFFFFF"
+  board_color_dark: "#242424"
 
-  post_text_color: "#2c3e50"
-  post_text_color_dark: "#c4c6c9"
+  post_text_color: "#1A1A1A"
+  post_text_color_dark: "#E8E4DC"
 
-  post_heading_color: "#1a202c"
-  post_heading_color_dark: "#d0d0d0"
+  post_heading_color: "#1A1A1A"
+  post_heading_color_dark: "#F0EBE1"
 
-  post_link_color: "#2a5298"
-  post_link_color_dark: "#5b8ef0"
+  post_link_color: "#CC785C"         # Anthropic terracotta
+  post_link_color_dark: "#E8917A"    # lighter terracotta
 
-  link_hover_color: "#1e3f80"
-  link_hover_color_dark: "#7aaef5"
+  link_hover_color: "#A85C42"
+  link_hover_color_dark: "#F0A890"
 
-  link_hover_bg_color: "#eef2fa"
-  link_hover_bg_color_dark: "#364151"
+  link_hover_bg_color: "#F5EDE6"     # warm tint
+  link_hover_bg_color_dark: "#2E2420"
 
-  line_color: "#e0e4ea"
-  line_color_dark: "#435266"
+  line_color: "#E8E2D9"              # warm gray border
+  line_color_dark: "#363636"
 
-  scrollbar_color: "#c4c6c9"
-  scrollbar_color_dark: "#687582"
-  scrollbar_hover_color: "#9da8b3"
-  scrollbar_hover_color_dark: "#9da8b3"
+  scrollbar_color: "#C8BFB5"
+  scrollbar_color_dark: "#555555"
+  scrollbar_hover_color: "#A89F95"
+  scrollbar_hover_color_dark: "#777777"
 
   button_bg_color: "transparent"
   button_bg_color_dark: "transparent"
-  button_hover_bg_color: "#eef2fa"
-  button_hover_bg_color_dark: "#46647e"
+  button_hover_bg_color: "#F5EDE6"
+  button_hover_bg_color_dark: "#2E2420"
 
 # Typography
 font:
