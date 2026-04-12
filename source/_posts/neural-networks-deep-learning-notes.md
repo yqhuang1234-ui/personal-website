@@ -28,7 +28,7 @@ Topics covered:
 
 .dl-intro {
   font-size: 0.95rem;
-  color: #5a6a7a;
+  color: #5F5F5F;
   margin: 0 0 1.5rem;
   line-height: 1.6;
 }
@@ -43,18 +43,19 @@ Topics covered:
 .dl-card {
   position: relative;
   background: #ffffff;
-  border: 1px solid #e0e4ea;
-  border-radius: 6px;
+  border: 1px solid #E8E2D9;
+  border-radius: 14px;
   overflow: hidden;
-  transition: border-color 0.18s ease, box-shadow 0.18s ease;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   display: flex;
   flex-direction: column;
 }
 
 .dl-card:hover {
-  border-color: #2a5298;
-  box-shadow: 0 4px 16px rgba(42,82,152,0.14);
+  transform: translateY(-5px);
+  border-color: #CC785C;
+  box-shadow: 0 8px 24px rgba(204,120,92,0.12);
 }
 
 /* iframe thumbnail wrapper */
@@ -64,8 +65,8 @@ Topics covered:
   height: 191px;
   overflow: hidden;
   flex-shrink: 0;
-  background: #1a1a1a;
-  border-bottom: 1px solid #e0e4ea;
+  background: #1A1A1A;
+  border-bottom: 1px solid #E8E2D9;
 }
 
 .dl-thumb iframe {
@@ -98,14 +99,14 @@ Topics covered:
 .dl-title {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #1A1A1A;
   line-height: 1.35;
   margin: 0;
 }
 
 .dl-desc {
   font-size: 0.82rem;
-  color: #5a6a7a;
+  color: #5F5F5F;
   line-height: 1.55;
   margin: 0;
   flex: 1;
@@ -114,7 +115,7 @@ Topics covered:
 .dl-cta {
   font-size: 0.78rem;
   font-weight: 500;
-  color: #2a5298;
+  color: #CC785C;
   margin: 0.35rem 0 0;
   position: relative;
   z-index: 3;
@@ -126,26 +127,25 @@ Topics covered:
   text-decoration: underline;
 }
 
-/* Dark mode */
+/* Dark mode — auto */
 @media (prefers-color-scheme: dark) {
-  .dl-intro { color: #a7a9ad; }
-
-  .dl-card {
-    background: #252d38;
-    border-color: #435266;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
-  }
-
-  .dl-card:hover {
-    border-color: #5b8ef0;
-    box-shadow: 0 4px 16px rgba(91,142,240,0.18);
-  }
-
-  .dl-thumb { border-bottom-color: #435266; }
-  .dl-title { color: #c4c6c9; }
-  .dl-desc  { color: #a7a9ad; }
-  .dl-cta   { color: #5b8ef0; }
+  html:not([data-user-color-scheme]) .dl-intro { color: #9B9288; }
+  html:not([data-user-color-scheme]) .dl-card  { background: #242424; border-color: #363636; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }
+  html:not([data-user-color-scheme]) .dl-card:hover { transform: translateY(-5px); border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }
+  html:not([data-user-color-scheme]) .dl-thumb { border-bottom-color: #363636; }
+  html:not([data-user-color-scheme]) .dl-title { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .dl-desc  { color: #9B9288; }
+  html:not([data-user-color-scheme]) .dl-cta   { color: #E8917A; }
 }
+
+/* Dark mode — manual toggle */
+html[data-user-color-scheme="dark"] .dl-intro { color: #9B9288; }
+html[data-user-color-scheme="dark"] .dl-card  { background: #242424; border-color: #363636; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }
+html[data-user-color-scheme="dark"] .dl-card:hover { transform: translateY(-5px); border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }
+html[data-user-color-scheme="dark"] .dl-thumb { border-bottom-color: #363636; }
+html[data-user-color-scheme="dark"] .dl-title { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .dl-desc  { color: #9B9288; }
+html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
 
 /* Mobile: single column */
 @media (max-width: 680px) {

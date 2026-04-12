@@ -9,7 +9,7 @@ date: 2026-04-02 05:12:39
 .ab-intro {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #2c3e50;
+  color: #1A1A1A;
   margin-bottom: 2.5rem;
   max-width: 680px;
 }
@@ -20,7 +20,7 @@ date: 2026-04-02 05:12:39
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #8a9bac;
+  color: #9B9288;
   margin: 0 0 1.25rem;
 }
 
@@ -29,7 +29,7 @@ date: 2026-04-02 05:12:39
   flex-direction: column;
   gap: 0;
   margin-bottom: 3rem;
-  border-left: 2px solid #e0e4ea;
+  border-left: 2px solid #E8E2D9;
   padding-left: 1.5rem;
 }
 
@@ -48,15 +48,15 @@ date: 2026-04-02 05:12:39
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #2a5298;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #2a5298;
+  background: #CC785C;
+  border: 2px solid #F7F2EA;
+  box-shadow: 0 0 0 2px #CC785C;
 }
 
 .ab-step-year {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #2a5298;
+  color: #CC785C;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 0.15rem;
@@ -65,13 +65,13 @@ date: 2026-04-02 05:12:39
 .ab-step-title {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #1A1A1A;
   margin-bottom: 0.2rem;
 }
 
 .ab-step-desc {
   font-size: 0.875rem;
-  color: #5a6a7a;
+  color: #5F5F5F;
   line-height: 1.55;
   margin: 0;
 }
@@ -196,26 +196,45 @@ date: 2026-04-02 05:12:39
 
 .ab-section { margin-bottom: 2.75rem; }
 
-/* ── Dark mode ──────────────────────────────────────────────────── */
+/* ── Dark mode — auto ───────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
-  .ab-intro             { color: #E8E4DC; }
-  .ab-section-title     { color: #777777; }
-  .ab-timeline          { border-left-color: #363636; }
-  .ab-step::before      { background: #E8917A; box-shadow: 0 0 0 2px #E8917A; border-color: #242424; }
-  .ab-step-year         { color: #E8917A; }
-  .ab-step-title        { color: #E8E4DC; }
-  .ab-step-desc         { color: #9B9288; }
-  .ab-art-card          { background: #242424; border-color: #363636; }
-  .ab-art-placeholder   { background: #2A2A2A; color: #555555; }
-  .ab-art-label         { color: #E8E4DC; }
-  .ab-art-caption       { color: #9B9288; }
-  .ab-outdoor-item      { color: #E8E4DC; }
-  .ab-outdoor-text      { color: #E8E4DC; }
-  .ab-outdoor-sub       { color: #9B9288; }
-  .ab-research-list li  { color: #E8E4DC; }
-  .ab-edu-degree        { color: #E8E4DC; }
-  .ab-edu-meta          { color: #9B9288; }
+  html:not([data-user-color-scheme]) .ab-intro             { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .ab-section-title     { color: #777777; }
+  html:not([data-user-color-scheme]) .ab-timeline          { border-left-color: #363636; }
+  html:not([data-user-color-scheme]) .ab-step::before      { background: #E8917A; box-shadow: 0 0 0 2px #E8917A; border-color: #191919; }
+  html:not([data-user-color-scheme]) .ab-step-year         { color: #E8917A; }
+  html:not([data-user-color-scheme]) .ab-step-title        { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .ab-step-desc         { color: #9B9288; }
+  html:not([data-user-color-scheme]) .ab-art-card          { background: #242424; border-color: #363636; }
+  html:not([data-user-color-scheme]) .ab-art-placeholder   { background: #2A2A2A; color: #555555; }
+  html:not([data-user-color-scheme]) .ab-art-label         { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .ab-art-caption       { color: #9B9288; }
+  html:not([data-user-color-scheme]) .ab-outdoor-item      { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .ab-outdoor-text      { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .ab-outdoor-sub       { color: #9B9288; }
+  html:not([data-user-color-scheme]) .ab-research-list li  { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .ab-edu-degree        { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .ab-edu-meta          { color: #9B9288; }
 }
+
+/* ── Dark mode — manual toggle ──────────────────────────────────── */
+html[data-user-color-scheme="dark"] .ab-intro             { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .ab-section-title     { color: #777777; }
+html[data-user-color-scheme="dark"] .ab-timeline          { border-left-color: #363636; }
+html[data-user-color-scheme="dark"] .ab-step::before      { background: #E8917A; box-shadow: 0 0 0 2px #E8917A; border-color: #191919; }
+html[data-user-color-scheme="dark"] .ab-step-year         { color: #E8917A; }
+html[data-user-color-scheme="dark"] .ab-step-title        { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .ab-step-desc         { color: #9B9288; }
+html[data-user-color-scheme="dark"] .ab-art-card          { background: #242424; border-color: #363636; }
+html[data-user-color-scheme="dark"] .ab-art-placeholder   { background: #2A2A2A; color: #555555; }
+html[data-user-color-scheme="dark"] .ab-art-label         { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .ab-art-caption       { color: #9B9288; }
+html[data-user-color-scheme="dark"] .ab-outdoor-item      { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .ab-outdoor-text      { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .ab-outdoor-sub       { color: #9B9288; }
+html[data-user-color-scheme="dark"] .ab-research-list li  { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .ab-edu-degree        { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
 
 /* ── Mobile ─────────────────────────────────────────────────────── */
 @media (max-width: 600px) {

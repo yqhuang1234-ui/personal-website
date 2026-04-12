@@ -55,7 +55,7 @@ dark_mode:
 
 # Color scheme — Anthropic × Notion inspired
 color:
-  body_bg_color: "#F8F5EF"           # warm cream (Anthropic)
+  body_bg_color: "#F7F2EA"           # rich warm cream (Anthropic)
   body_bg_color_dark: "#191919"      # near-black (Notion)
 
   navbar_bg_color: "#1A1A1A"         # true dark
@@ -113,6 +113,9 @@ font:
 
 # Icon library
 iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
+
+# Custom CSS (loaded after theme CSS)
+custom_css: /css/custom.css
 
 
 #---------------------------
