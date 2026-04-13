@@ -244,7 +244,7 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
 </style>
 
 <p class="ab-intro">
-  I think in gradients and paint in watercolor. After six years as a data scientist, I came back to school to do it <em>right</em> — rigorous methods, real biomedical questions, and eventually a PhD. I care just as much about making something beautiful as making something correct.
+  I live in the overlap between data and creativity, logic and art, work and play. Always learning, always making, always moving.
 </p>
 
 ---
