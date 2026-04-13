@@ -6,6 +6,66 @@ date: 2026-04-02 05:12:39
 <style>
 /* ── About page — namespace: ab- ────────────────────────────────── */
 
+/* ── Profile header ─────────────────────────────────────────────── */
+.ab-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  gap: 0.75rem;
+}
+
+.ab-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #E8E2D9;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.ab-profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.ab-contact-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ab-contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #F5F0E8;
+  color: #4A4A4A;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+
+.ab-contact-link:hover {
+  background: #CC785C;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.ab-contact-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 .ab-intro {
   font-size: 1.05rem;
   line-height: 1.75;
@@ -196,52 +256,31 @@ date: 2026-04-02 05:12:39
 
 .ab-section { margin-bottom: 2.75rem; }
 
-/* ── Dark mode — auto ───────────────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  html:not([data-user-color-scheme]) .ab-intro             { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .ab-section-title     { color: #777777; }
-  html:not([data-user-color-scheme]) .ab-timeline          { border-left-color: #363636; }
-  html:not([data-user-color-scheme]) .ab-step::before      { background: #E8917A; box-shadow: 0 0 0 2px #E8917A; border-color: #191919; }
-  html:not([data-user-color-scheme]) .ab-step-year         { color: #E8917A; }
-  html:not([data-user-color-scheme]) .ab-step-title        { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .ab-step-desc         { color: #9B9288; }
-  html:not([data-user-color-scheme]) .ab-art-card          { background: #242424; border-color: #363636; }
-  html:not([data-user-color-scheme]) .ab-art-placeholder   { background: #2A2A2A; color: #555555; }
-  html:not([data-user-color-scheme]) .ab-art-label         { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .ab-art-caption       { color: #9B9288; }
-  html:not([data-user-color-scheme]) .ab-outdoor-item      { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .ab-outdoor-text      { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .ab-outdoor-sub       { color: #9B9288; }
-  html:not([data-user-color-scheme]) .ab-research-list li  { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .ab-edu-degree        { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .ab-edu-meta          { color: #9B9288; }
-}
-
-/* ── Dark mode — manual toggle ──────────────────────────────────── */
-html[data-user-color-scheme="dark"] .ab-intro             { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .ab-section-title     { color: #777777; }
-html[data-user-color-scheme="dark"] .ab-timeline          { border-left-color: #363636; }
-html[data-user-color-scheme="dark"] .ab-step::before      { background: #E8917A; box-shadow: 0 0 0 2px #E8917A; border-color: #191919; }
-html[data-user-color-scheme="dark"] .ab-step-year         { color: #E8917A; }
-html[data-user-color-scheme="dark"] .ab-step-title        { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .ab-step-desc         { color: #9B9288; }
-html[data-user-color-scheme="dark"] .ab-art-card          { background: #242424; border-color: #363636; }
-html[data-user-color-scheme="dark"] .ab-art-placeholder   { background: #2A2A2A; color: #555555; }
-html[data-user-color-scheme="dark"] .ab-art-label         { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .ab-art-caption       { color: #9B9288; }
-html[data-user-color-scheme="dark"] .ab-outdoor-item      { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .ab-outdoor-text      { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .ab-outdoor-sub       { color: #9B9288; }
-html[data-user-color-scheme="dark"] .ab-research-list li  { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .ab-edu-degree        { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
-
 /* ── Mobile ─────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .ab-art-grid    { grid-template-columns: 1fr; }
   .ab-outdoor-row { gap: 1rem; }
 }
 </style>
+
+<div class="ab-profile">
+  <img class="ab-avatar" src="/img/avatar.png" alt="Yanqi Huang">
+  <p class="ab-profile-name">Yanqi Huang</p>
+  <div class="ab-contact-row">
+    <!-- GitHub -->
+    <a class="ab-contact-link" href="https://github.com/yqhuang1234-ui" target="_blank" rel="noopener" title="GitHub">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+    <!-- LinkedIn -->
+    <a class="ab-contact-link" href="https://www.linkedin.com/in/yanqi-huang" target="_blank" rel="noopener" title="LinkedIn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <!-- Gmail -->
+    <a class="ab-contact-link" href="mailto:yqhuang1234@gmail.com" title="Email">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.9.732-1.636 1.636-1.636h.749L12 11.73 21.615 3.82h.749c.904 0 1.636.737 1.636 1.637z"/></svg>
+    </a>
+  </div>
+</div>
 
 <p class="ab-intro">
   I live in the overlap between data and creativity, logic and art, work and play. Always learning, always making, always moving.
@@ -358,4 +397,4 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
 
 ---
 
-I'm always happy to connect - reach me at **[yqhuang1234@gmail.com](mailto:yqhuang1234@gmail.com)** or on [GitHub](https://github.com/yqhuang1234-ui).
+I'm always happy to connect — find me via the icons above.
