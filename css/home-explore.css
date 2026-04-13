@@ -80,6 +80,24 @@
   color: #fff;
 }
 
+.ex-pill-sep {
+  margin: 0 0.25em;
+  opacity: 0.45;
+  font-weight: 400;
+}
+
+.ex-pill-count {
+  color: #4caf7d;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+.ex-pill.ex-active .ex-pill-sep,
+.ex-pill.ex-active .ex-pill-count {
+  color: inherit;
+  opacity: 1;
+}
+
 /* Grid */
 .ex-grid {
   display: grid;

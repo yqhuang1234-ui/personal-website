@@ -90,12 +90,6 @@
     }
 
     /* ── Helpers ─────────────────────────────────────────────────── */
-    function makeEl(tag, cls, text) {
-      var el = document.createElement(tag);
-      el.className = cls;
-      el.textContent = text;
-      return el;
-    }
     function escHtml(s) {
       return String(s)
         .replace(/&/g, '&amp;')
@@ -107,7 +101,7 @@
     /* ── Apply filter (show/hide cards + update pills) ───────────── */
     function applyFilter(tag) {
       document.querySelectorAll('#ex-tag-bar-home .ex-pill').forEach(function (p) {
-        p.classList.toggle('ex-active', p.textContent === (tag || 'All'));
+        p.classList.toggle('ex-active', p.dataset.tag === (tag || ''));
       });
       document.querySelectorAll('#ex-grid-home .ex-card').forEach(function (card) {
         var tags = JSON.parse(card.dataset.tags || '[]');
@@ -119,13 +113,21 @@
     /* ── Render tag bar ──────────────────────────────────────────── */
     function renderTagBar(tagMap) {
       var bar = document.getElementById('ex-tag-bar-home');
-      var sorted = Object.entries(tagMap).sort(function (a, b) { return b[1] - a[1]; }).map(function (e) { return e[0]; });
-      var allBtn = makeEl('span', 'ex-pill ex-active', 'All');
-      allBtn.addEventListener('click', function () { applyFilter(''); });
+      var sorted = Object.entries(tagMap).sort(function (a, b) { return b[1] - a[1]; });
+      var allCount = Object.values(tagMap).reduce(function (s, n) { return s + n; }, 0);
       bar.innerHTML = '';
+      var allBtn = document.createElement('span');
+      allBtn.className = 'ex-pill ex-active';
+      allBtn.dataset.tag = '';
+      allBtn.innerHTML = 'All <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + allCount + '</span>';
+      allBtn.addEventListener('click', function () { applyFilter(''); });
       bar.appendChild(allBtn);
-      sorted.forEach(function (tag) {
-        var pill = makeEl('span', 'ex-pill', tag);
+      sorted.forEach(function (entry) {
+        var tag = entry[0], count = entry[1];
+        var pill = document.createElement('span');
+        pill.className = 'ex-pill';
+        pill.dataset.tag = tag;
+        pill.innerHTML = escHtml(tag) + ' <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + count + '</span>';
         pill.addEventListener('click', function () { applyFilter(tag); });
         bar.appendChild(pill);
       });
