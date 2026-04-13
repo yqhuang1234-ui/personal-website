@@ -52,13 +52,12 @@
 
     /* ── Cover image lookup (keyed by post URL) ─────────────────── */
     var POST_IMGS = {
-      '/2026/04/03/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg'
+      '/2026/04/03/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
+      '/2026/04/14/probability-distributions/': '/img/posts/probability-distributions.jpg'
     };
 
     /* ── iframe thumbnail lookup (keyed by post URL) ─────────────── */
-    var POST_IFRAMES = {
-      '/2026/04/14/probability-distributions/': '/statistical theory/probability_distributions.html'
-    };
+    var POST_IFRAMES = {};
 
     /* ── Parse local-search.xml → post items ────────────────────── */
     function parsePosts(xmlText) {
