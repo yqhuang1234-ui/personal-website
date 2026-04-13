@@ -5,7 +5,7 @@ tags:
   - survival-analysis
   - blog
 categories:
-  - Statistics
+  # - Statistics
 index_img: /img/posts/survival-analysis.jpg
 math: false
 excerpt: >
