@@ -2,13 +2,6 @@
   /* Only run on the blog archive pages */
   if (!/^\/blog(\/page\/\d+)?\/?$/.test(window.location.pathname)) return;
 
-  /* Cover image lookup (keyed by post URL) */
-  var POST_IMGS = {
-    '/2026/04/03/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
-    '/2026/04/04/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
-    '/2026/04/14/probability-distributions/': '/img/posts/probability-distributions.jpg'
-  };
-
   function escHtml(s) {
     return String(s)
       .replace(/&/g, '&amp;')
@@ -26,12 +19,13 @@
       var content = (e.querySelector('content') || {}).textContent || '';
       var desc = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
       var tags = Array.from(e.querySelectorAll('tags tag')).map(function (t) { return t.textContent.trim(); });
+      var img = (e.querySelector('img') || {}).textContent || null;
       var dateRaw = (e.querySelector('date') || {}).textContent || '';
       var dateStr = dateRaw ? new Date(dateRaw).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
       return {
         title: (e.querySelector('title') || {}).textContent || 'Untitled',
         url: url,
-        img: POST_IMGS[url] || null,
+        img: img,
         desc: desc,
         tags: tags,
         date: dateStr
