@@ -101,15 +101,17 @@
         .replace(/"/g, '&quot;');
     }
 
+    /* ── Active tag set ──────────────────────────────────────────── */
+    var activeTags = new Set();
+
     /* ── Apply filter (show/hide cards + update pills) ───────────── */
-    function applyFilter(tag) {
-      document.querySelectorAll('#ex-tag-bar-home .ex-pill').forEach(function (p) {
-        p.classList.toggle('ex-active', p.dataset.tag === (tag || ''));
-      });
+    function applyFilter() {
+      var allBtn = document.querySelector('#ex-tag-bar-home .ex-pill[data-tag=""]');
+      if (allBtn) allBtn.classList.toggle('ex-active', activeTags.size === 0);
       document.querySelectorAll('#ex-grid-home .ex-card').forEach(function (card) {
         var tags = JSON.parse(card.dataset.tags || '[]');
-        var hide = tag && !tags.includes(tag);
-        card.classList.toggle('ex-hidden', !!hide);
+        var hide = activeTags.size > 0 && !tags.some(function (t) { return activeTags.has(t); });
+        card.classList.toggle('ex-hidden', hide);
       });
     }
 
@@ -123,7 +125,13 @@
       allBtn.className = 'ex-pill ex-active';
       allBtn.dataset.tag = '';
       allBtn.innerHTML = 'All <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + allCount + '</span>';
-      allBtn.addEventListener('click', function () { applyFilter(''); });
+      allBtn.addEventListener('click', function () {
+        activeTags.clear();
+        document.querySelectorAll('#ex-tag-bar-home .ex-pill[data-tag]').forEach(function (p) {
+          if (p.dataset.tag !== '') p.classList.remove('ex-active');
+        });
+        applyFilter();
+      });
       bar.appendChild(allBtn);
       sorted.forEach(function (entry) {
         var tag = entry[0], count = entry[1];
@@ -131,7 +139,16 @@
         pill.className = 'ex-pill';
         pill.dataset.tag = tag;
         pill.innerHTML = escHtml(tag) + ' <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + count + '</span>';
-        pill.addEventListener('click', function () { applyFilter(tag); });
+        pill.addEventListener('click', function () {
+          if (activeTags.has(tag)) {
+            activeTags.delete(tag);
+            pill.classList.remove('ex-active');
+          } else {
+            activeTags.add(tag);
+            pill.classList.add('ex-active');
+          }
+          applyFilter();
+        });
         bar.appendChild(pill);
       });
     }
