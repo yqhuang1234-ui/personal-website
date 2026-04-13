@@ -290,7 +290,7 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
     <img class="ab-art-img" src="/img/artwork/watercolor.jpg" alt="Watercolor painting">
     <div class="ab-art-body">
       <p class="ab-art-label">Watercolor</p>
-      <p class="ab-art-caption">Loose, expressive, and a little unpredictable — just like data.</p>
+      <p class="ab-art-caption">I sketch outside and let it pull me into the present — suddenly I'm noticing every little thing around me.</p>
     </div>
   </div>
 
@@ -298,7 +298,7 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
     <img class="ab-art-img" src="/img/artwork/crochet.jpg" alt="Crochet work">
     <div class="ab-art-body">
       <p class="ab-art-label">Crochet</p>
-      <p class="ab-art-caption">Repetition with variation — a pattern that's never quite the same twice.</p>
+      <p class="ab-art-caption">I love seeing something go from yarn to an actual thing I can put in my home or give away.</p>
     </div>
   </div>
 
@@ -306,7 +306,7 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
     <img class="ab-art-img" src="/img/artwork/sewing.jpg" alt="Sewing project">
     <div class="ab-art-body">
       <p class="ab-art-label">Sewing</p>
-      <p class="ab-art-caption">Precision and patience — measuring twice, cutting once.</p>
+      <p class="ab-art-caption">Same feeling as crochet — making something real with my own hands never gets old.</p>
     </div>
   </div>
 
@@ -323,7 +323,7 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
     <img class="ab-art-img" src="/img/outdoors/hiking.jpg" alt="Hiking">
     <div class="ab-art-body">
       <p class="ab-art-label">🥾 Hiking</p>
-      <p class="ab-art-caption">Where I do my best thinking — the further from a screen, the better.</p>
+      <p class="ab-art-caption">For the views you can only earn on foot.</p>
     </div>
   </div>
 
@@ -331,7 +331,7 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
     <img class="ab-art-img" src="/img/outdoors/biking.jpg" alt="Biking">
     <div class="ab-art-body">
       <p class="ab-art-label">🚴 Biking</p>
-      <p class="ab-art-caption">Long rides, open roads, and a very optimistic sense of distance.</p>
+      <p class="ab-art-caption">Takes me further, shows me more.</p>
     </div>
   </div>
 
@@ -339,7 +339,7 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
     <img class="ab-art-img" src="/img/outdoors/marathon.jpg" alt="Half Marathon">
     <div class="ab-art-body">
       <p class="ab-art-label">🏃 Half Marathon</p>
-      <p class="ab-art-caption">Once a year — the only deadline I never miss.</p>
+      <p class="ab-art-caption">Not the fastest, but three years in and I plan to keep running one every year for the rest of my life.</p>
     </div>
   </div>
 
