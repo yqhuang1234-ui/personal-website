@@ -19,26 +19,25 @@
   <meta name="author" content="Yanqi Huang">
   <meta name="keywords" content="biostatistics, statistics, PhD, causal inference, survival analysis">
   
-    <meta name="description" content="Interactive notes on neural network fundamentals: activation functions, backpropagation, tensor dimensions, and annotated network diagrams.">
+    <meta name="description" content="An interactive reference covering discrete and continuous probability distributions: PMF&#x2F;PDF, CDF, moments, and interactive charts for each distribution family.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Neural Networks and Deep Learning – Course Notes">
-<meta property="og:url" content="https://yqhuang1234-ui.github.io/2026/04/04/neural-networks-deep-learning-notes/index.html">
+<meta property="og:title" content="Probability Distributions – Reference Notes">
+<meta property="og:url" content="https://yqhuang1234-ui.github.io/2026/04/14/probability-distributions/index.html">
 <meta property="og:site_name" content="Yanqi Huang">
-<meta property="og:description" content="Interactive notes on neural network fundamentals: activation functions, backpropagation, tensor dimensions, and annotated network diagrams.">
+<meta property="og:description" content="An interactive reference covering discrete and continuous probability distributions: PMF&#x2F;PDF, CDF, moments, and interactive charts for each distribution family.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://yqhuang1234-ui.github.io/img/posts/neural-networks.jpg">
-<meta property="article:published_time" content="2026-04-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-04-13T03:49:46.715Z">
+<meta property="article:published_time" content="2026-04-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-13T06:52:26.768Z">
 <meta property="article:author" content="Yanqi Huang">
 <meta property="article:tag" content="blog">
-<meta property="article:tag" content="deep-learning">
 <meta property="article:tag" content="learning-notes">
+<meta property="article:tag" content="probability">
+<meta property="article:tag" content="statistical-theory">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://yqhuang1234-ui.github.io/img/posts/neural-networks.jpg">
   
   
   
-  <title>Neural Networks and Deep Learning – Course Notes - Yanqi Huang</title>
+  <title>Probability Distributions – Reference Notes - Yanqi Huang</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -292,7 +291,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Neural Networks and Deep Learning – Course Notes</span>
+            <span id="subtitle">Probability Distributions – Reference Notes</span>
           
         </div>
 
@@ -308,8 +307,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-04-03 12:00" pubdate>
-          April 3, 2026
+        <time datetime="2026-04-13 12:00" pubdate>
+          April 13, 2026
         </time>
       </span>
     
@@ -320,7 +319,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.8k words
+          2.4k words
         
       </span>
     
@@ -331,7 +330,7 @@
         
         
         
-          4 mins
+          3 mins
         
       </span>
     
@@ -370,38 +369,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Neural Networks and Deep Learning – Course Notes</h1>
+            <h1 id="seo-header">Probability Distributions – Reference Notes</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Personal notes on neural network fundamentals, written as interactive HTML references.</p>
-<p>Topics covered:</p>
-<ul>
-<li><strong>Activation Functions &amp; Gradients</strong> — Sigmoid, Tanh, ReLU, Leaky ReLU with gradient visualizations</li>
-<li><strong>Backpropagation</strong> — Chain rule, forward&#x2F;backward pass, and all six gradient equations</li>
-<li><strong>Dimension Checker</strong> — Interactive tool for tensor shapes across any network architecture</li>
-<li><strong>Annotated Network Diagram</strong> — Clickable multi-layer network with step-by-step computations</li>
-</ul>
+                <p>Interactive reference notes on probability distributions — covering discrete and continuous families with visualizations.</p>
 <style>
-/* ── Deep-learning notes gallery ─────────────────────────────────────── */
-/* Namespace: dl-  (no collision with Fluid theme or projects page styles) */
-
-.dl-intro {
-  font-size: 0.95rem;
-  color: #5F5F5F;
-  margin: 0 0 1.5rem;
-  line-height: 1.6;
-}
-
-.dl-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin: 0 0 2rem;
-}
-
-.dl-card {
+.st-card {
   position: relative;
   background: #ffffff;
   border: 1px solid #E8E2D9;
@@ -411,162 +386,105 @@
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   display: flex;
   flex-direction: column;
+  max-width: 480px;
+  margin: 1.5rem auto 2rem;
 }
 
-.dl-card:hover {
+.st-card:hover {
   transform: translateY(-5px);
   border-color: #CC785C;
   box-shadow: 0 8px 24px rgba(204,120,92,0.12);
 }
 
-/* iframe thumbnail wrapper */
-.dl-thumb {
+.st-thumb {
   position: relative;
-  width: 320px;
-  height: 191px;
+  width: 100%;
+  height: 220px;
   overflow: hidden;
   flex-shrink: 0;
-  background: #1A1A1A;
+  background: #faf9f6;
   border-bottom: 1px solid #E8E2D9;
 }
 
-.dl-thumb iframe {
+.st-thumb iframe {
   width: 1440px;
   height: 860px;
-  transform: scale(0.2222);
+  transform: scale(0.3111);
   transform-origin: top left;
   pointer-events: none;
   border: none;
   display: block;
 }
 
-/* Full-card overlay link — sits above the iframe */
-.dl-overlay {
+.st-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   display: block;
 }
 
-/* Card text body */
-.dl-body {
-  padding: 0.85rem 1rem 0.9rem;
+.st-body {
+  padding: 0.9rem 1.1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  flex: 1;
 }
 
-.dl-title {
-  font-size: 0.9rem;
+.st-title {
+  font-size: 0.95rem;
   font-weight: 600;
   color: #1A1A1A;
-  line-height: 1.35;
   margin: 0;
+  line-height: 1.35;
 }
 
-.dl-desc {
+.st-desc {
   font-size: 0.82rem;
   color: #5F5F5F;
   line-height: 1.55;
   margin: 0;
-  flex: 1;
 }
 
-.dl-cta {
+.st-cta {
   font-size: 0.78rem;
   font-weight: 500;
   color: #CC785C;
-  margin: 0.35rem 0 0;
-  position: relative;
-  z-index: 3;
+  margin: 0.4rem 0 0;
   text-decoration: none;
   display: inline-block;
+  position: relative;
+  z-index: 3;
 }
 
-.dl-cta:hover {
-  text-decoration: underline;
-}
+.st-cta:hover { text-decoration: underline; }
 
-/* Dark mode — auto */
 @media (prefers-color-scheme: dark) {
-  html:not([data-user-color-scheme]) .dl-intro { color: #9B9288; }
-  html:not([data-user-color-scheme]) .dl-card  { background: #242424; border-color: #363636; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }
-  html:not([data-user-color-scheme]) .dl-card:hover { transform: translateY(-5px); border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }
-  html:not([data-user-color-scheme]) .dl-thumb { border-bottom-color: #363636; }
-  html:not([data-user-color-scheme]) .dl-title { color: #E8E4DC; }
-  html:not([data-user-color-scheme]) .dl-desc  { color: #9B9288; }
-  html:not([data-user-color-scheme]) .dl-cta   { color: #E8917A; }
+  html:not([data-user-color-scheme]) .st-card  { background: #242424; border-color: #363636; }
+  html:not([data-user-color-scheme]) .st-card:hover { border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }
+  html:not([data-user-color-scheme]) .st-thumb { background: #1A1A1A; border-bottom-color: #363636; }
+  html:not([data-user-color-scheme]) .st-title { color: #E8E4DC; }
+  html:not([data-user-color-scheme]) .st-desc  { color: #9B9288; }
+  html:not([data-user-color-scheme]) .st-cta   { color: #E8917A; }
 }
 
-/* Dark mode — manual toggle */
-html[data-user-color-scheme="dark"] .dl-intro { color: #9B9288; }
-html[data-user-color-scheme="dark"] .dl-card  { background: #242424; border-color: #363636; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }
-html[data-user-color-scheme="dark"] .dl-card:hover { transform: translateY(-5px); border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }
-html[data-user-color-scheme="dark"] .dl-thumb { border-bottom-color: #363636; }
-html[data-user-color-scheme="dark"] .dl-title { color: #E8E4DC; }
-html[data-user-color-scheme="dark"] .dl-desc  { color: #9B9288; }
-html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
-
-/* Mobile: single column */
-@media (max-width: 680px) {
-  .dl-grid { grid-template-columns: 1fr; }
-  .dl-card { max-width: 400px; margin: 0 auto; width: 100%; }
-}
+html[data-user-color-scheme="dark"] .st-card  { background: #242424; border-color: #363636; }
+html[data-user-color-scheme="dark"] .st-card:hover { border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }
+html[data-user-color-scheme="dark"] .st-thumb { background: #1A1A1A; border-bottom-color: #363636; }
+html[data-user-color-scheme="dark"] .st-title { color: #E8E4DC; }
+html[data-user-color-scheme="dark"] .st-desc  { color: #9B9288; }
+html[data-user-color-scheme="dark"] .st-cta   { color: #E8917A; }
 </style>
 
-<p class="dl-intro">Click any card to open the note directly.</p>
-
-<div class="dl-grid">
-
-  <div class="dl-card">
-    <div class="dl-thumb">
-      <a class="dl-overlay" href="/deep-learning/activation_functions.html" aria-label="Open Activation Functions &amp; Gradients"></a>
-      <iframe src="/deep-learning/activation_functions.html" title="Activation Functions preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
-    </div>
-    <div class="dl-body">
-      <p class="dl-title">Activation Functions &amp; Gradients</p>
-      <p class="dl-desc">Sigmoid, Tanh, ReLU, and Leaky ReLU with interactive gradient visualizations and saturation analysis.</p>
-      <a class="dl-cta" href="/deep-learning/activation_functions.html">Open &rarr;</a>
-    </div>
+<div class="st-card">
+  <div class="st-thumb">
+    <a class="st-overlay" href="/statistical theory/probability_distributions.html" aria-label="Open Probability Distributions Reference"></a>
+    <iframe src="/statistical theory/probability_distributions.html" title="Probability Distributions preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
   </div>
-
-  <div class="dl-card">
-    <div class="dl-thumb">
-      <a class="dl-overlay" href="/deep-learning/backprop_explainer.html" aria-label="Open Backpropagation — Interactive Deep Dive"></a>
-      <iframe src="/deep-learning/backprop_explainer.html" title="Backpropagation preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
-    </div>
-    <div class="dl-body">
-      <p class="dl-title">Backpropagation — Interactive Deep Dive</p>
-      <p class="dl-desc">Chain rule, forward and backward pass, and all six gradient equations with step-by-step walkthrough.</p>
-      <a class="dl-cta" href="/deep-learning/backprop_explainer.html">Open &rarr;</a>
-    </div>
+  <div class="st-body">
+    <p class="st-title">Probability Distributions Reference</p>
+    <p class="st-desc">PMF/PDF, CDF, moments, and interactive charts for discrete and continuous distribution families.</p>
+    <a class="st-cta" href="/statistical theory/probability_distributions.html">Open full reference &rarr;</a>
   </div>
-
-  <div class="dl-card">
-    <div class="dl-thumb">
-      <a class="dl-overlay" href="/deep-learning/dimension_checker.html" aria-label="Open Neural Network Dimension Checker"></a>
-      <iframe src="/deep-learning/dimension_checker.html" title="Dimension Checker preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
-    </div>
-    <div class="dl-body">
-      <p class="dl-title">Neural Network Dimension Checker</p>
-      <p class="dl-desc">Interactive tool for computing exact tensor shapes of weights, biases, and activations for any architecture.</p>
-      <a class="dl-cta" href="/deep-learning/dimension_checker.html">Open &rarr;</a>
-    </div>
-  </div>
-
-  <div class="dl-card">
-    <div class="dl-thumb">
-      <a class="dl-overlay" href="/deep-learning/neural_network_annotated.html" aria-label="Open Neural Network — Annotated"></a>
-      <iframe src="/deep-learning/neural_network_annotated.html" title="Annotated Network preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
-    </div>
-    <div class="dl-body">
-      <p class="dl-title">Neural Network — Annotated</p>
-      <p class="dl-desc">Clickable multi-layer diagram showing weighted-sum and activation computation at every node.</p>
-      <a class="dl-cta" href="/deep-learning/neural_network_annotated.html">Open &rarr;</a>
-    </div>
-  </div>
-
 </div>
 
                 
@@ -576,36 +494,17 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Learning-Notes/" class="category-chain-item">Learning Notes</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/deep-learning/" class="print-no-link">#deep-learning</a>
-      
         <a href="/tags/learning-notes/" class="print-no-link">#learning-notes</a>
       
         <a href="/tags/blog/" class="print-no-link">#blog</a>
+      
+        <a href="/tags/probability/" class="print-no-link">#probability</a>
+      
+        <a href="/tags/statistical-theory/" class="print-no-link">#statistical-theory</a>
       
     </div>
   
@@ -617,8 +516,8 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Neural Networks and Deep Learning – Course Notes</div>
-      <div>https://yqhuang1234-ui.github.io/2026/04/04/neural-networks-deep-learning-notes/</div>
+      <div>Probability Distributions – Reference Notes</div>
+      <div>https://yqhuang1234-ui.github.io/2026/04/14/probability-distributions/</div>
     </div>
     <div class="license-meta">
       
@@ -630,7 +529,7 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>April 3, 2026</div>
+          <div>April 13, 2026</div>
         </div>
       
       
@@ -662,18 +561,12 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/04/14/probability-distributions/" title="Probability Distributions – Reference Notes">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Probability Distributions – Reference Notes</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/04/02/Getting-Started-with-Survival-Analysis-in-R/" title="Getting Started with Survival Analysis in R">
-                        <span class="hidden-mobile">Getting Started with Survival Analysis in R</span>
+                      <a href="/2026/04/04/neural-networks-deep-learning-notes/" title="Neural Networks and Deep Learning – Course Notes">
+                        <span class="hidden-mobile">Neural Networks and Deep Learning – Course Notes</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
