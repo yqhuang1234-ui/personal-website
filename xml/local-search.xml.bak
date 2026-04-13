@@ -7,7 +7,6 @@
     <title>{{ post.title }}</title>
     <link href="{{ [url, post.path] | urlJoin | uriencode }}"/>
     <url>{{ [url, post.path] | urlJoin | uriencode }}</url>
-    {% if post.index_img %}<img>{{ post.index_img }}</img>{% endif %}
     {% if content %}
     <content type="html"><![CDATA[{{ post.content | noControlChars | safe }}]]></content>
     {% endif %}
