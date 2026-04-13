@@ -4,6 +4,7 @@ date: 2026-04-03 12:00:00
 tags:
   - deep-learning
   - learning-notes
+  - blog
 categories:
   - Learning Notes
 index_img: /img/posts/neural-networks.jpg
