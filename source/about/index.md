@@ -351,11 +351,9 @@ html[data-user-color-scheme="dark"] .ab-edu-meta          { color: #9B9288; }
 <div class="ab-section">
 <p class="ab-section-title">Research Interests</p>
 <ul class="ab-research-list">
-  <li><strong>Machine learning for biomedical data</strong> — applying ML and deep learning to clinical, genomic, and EHR datasets</li>
-  <li><strong>Predictive modeling</strong> — building models that generalize under distribution shift and real-world messiness</li>
-  <li><strong>Neural networks in healthcare</strong> — interpretable models, survival prediction, multi-modal data fusion</li>
-  <li><strong>Bridging industry DS and academic methods</strong> — making production-grade approaches statistically rigorous</li>
-</ul>
+  <li><strong>Deep learning for biomedical data, with a focus on medical imaging</li>
+  <li><strong>passionate about making data approachable and creatively explaining complex concepts</li>
+</ul> 
 </div>
 
 ---
