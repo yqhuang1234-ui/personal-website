@@ -32,13 +32,48 @@
   padding: 0 0 1.5rem;
 }
 
+.ex-explore-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #E8E2D9;
+}
+
 .ex-home-section h2 {
   font-size: 1.25rem;
   font-weight: 600;
   color: #1A1A1A;
-  margin: 0 0 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #E8E2D9;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.ex-mode-toggle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25em 0.75em;
+  border: 1px solid #D8D0C4;
+  border-radius: 20px;
+  background: transparent;
+  color: #5F5F5F;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ex-mode-toggle:hover {
+  border-color: #CC785C;
+  color: #CC785C;
+}
+
+.ex-mode-toggle.ex-mode-active {
+  background: #F5EDE6;
+  border-color: #CC785C;
+  color: #A85C42;
 }
 
 .ex-intro {
@@ -232,6 +267,10 @@
 @media (prefers-color-scheme: dark) {
   html:not([data-user-color-scheme]) .ex-recent-heading  { color: #E8E4DC; border-color: #363636; }
   html:not([data-user-color-scheme]) .ex-home-section h2 { color: #E8E4DC; border-color: #363636; }
+  html:not([data-user-color-scheme]) .ex-explore-header  { border-color: #363636; }
+  html:not([data-user-color-scheme]) .ex-mode-toggle     { color: #9B9288; border-color: #363636; }
+  html:not([data-user-color-scheme]) .ex-mode-toggle:hover { color: #E8917A; border-color: #E8917A; }
+  html:not([data-user-color-scheme]) .ex-mode-toggle.ex-mode-active { background: #2E2420; border-color: #E8917A; color: #E8917A; }
   html:not([data-user-color-scheme]) .ex-intro       { color: #9B9288; }
   html:not([data-user-color-scheme]) .ex-pill        { color: #E8E4DC; border-color: #363636; }
   html:not([data-user-color-scheme]) .ex-pill:hover  { color: #E8917A; border-color: #E8917A; }
@@ -249,6 +288,10 @@
 /* Dark mode — manual toggle */
 html[data-user-color-scheme="dark"] .ex-recent-heading  { color: #E8E4DC; border-color: #363636; }
 html[data-user-color-scheme="dark"] .ex-home-section h2 { color: #E8E4DC; border-color: #363636; }
+html[data-user-color-scheme="dark"] .ex-explore-header  { border-color: #363636; }
+html[data-user-color-scheme="dark"] .ex-mode-toggle     { color: #9B9288; border-color: #363636; }
+html[data-user-color-scheme="dark"] .ex-mode-toggle:hover { color: #E8917A; border-color: #E8917A; }
+html[data-user-color-scheme="dark"] .ex-mode-toggle.ex-mode-active { background: #2E2420; border-color: #E8917A; color: #E8917A; }
 html[data-user-color-scheme="dark"] .ex-intro       { color: #9B9288; }
 html[data-user-color-scheme="dark"] .ex-pill        { color: #E8E4DC; border-color: #363636; }
 html[data-user-color-scheme="dark"] .ex-pill:hover  { color: #E8917A; border-color: #E8917A; }

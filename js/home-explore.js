@@ -22,8 +22,11 @@
     var section = document.createElement('div');
     section.className = 'ex-home-section';
     section.innerHTML =
-      '<h2>Explore</h2>' +
-      '<p class="ex-intro">Browse all posts and projects by tag. Click a tag to filter.</p>' +
+      '<div class="ex-explore-header">' +
+        '<h2>Explore</h2>' +
+        '<button class="ex-mode-toggle" id="ex-mode-toggle" title="Switch to multi-select">Multi-select</button>' +
+      '</div>' +
+      '<p class="ex-intro" id="ex-intro-text">Browse all posts and projects by tag. Click a tag to filter.</p>' +
       '<div class="ex-tag-bar" id="ex-tag-bar-home"><span class="ex-loading">Loading tags\u2026</span></div>' +
       '<div class="ex-grid" id="ex-grid-home"><div class="ex-loading">Loading content\u2026</div></div>';
 
@@ -101,7 +104,8 @@
         .replace(/"/g, '&quot;');
     }
 
-    /* ── Active tag set ──────────────────────────────────────────── */
+    /* ── Filter state ────────────────────────────────────────────── */
+    var multiMode = false;
     var activeTags = new Set();
 
     /* ── Apply filter (show/hide cards + update pills) ───────────── */
@@ -112,6 +116,37 @@
         var tags = JSON.parse(card.dataset.tags || '[]');
         var hide = activeTags.size > 0 && !tags.some(function (t) { return activeTags.has(t); });
         card.classList.toggle('ex-hidden', hide);
+      });
+    }
+
+    /* ── Toggle select mode ──────────────────────────────────────── */
+    function initModeToggle() {
+      var btn = document.getElementById('ex-mode-toggle');
+      var intro = document.getElementById('ex-intro-text');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        multiMode = !multiMode;
+        if (multiMode) {
+          btn.textContent = 'Single-select';
+          btn.title = 'Switch to single-select';
+          btn.classList.add('ex-mode-active');
+          intro.textContent = 'Multi-select mode: click multiple tags to filter by any of them.';
+        } else {
+          btn.textContent = 'Multi-select';
+          btn.title = 'Switch to multi-select';
+          btn.classList.remove('ex-mode-active');
+          intro.textContent = 'Browse all posts and projects by tag. Click a tag to filter.';
+          /* Reset to single selection — keep first active tag if any */
+          var first = activeTags.size > 0 ? Array.from(activeTags)[0] : null;
+          activeTags.clear();
+          document.querySelectorAll('#ex-tag-bar-home .ex-pill').forEach(function (p) { p.classList.remove('ex-active'); });
+          if (first) {
+            activeTags.add(first);
+            var pill = document.querySelector('#ex-tag-bar-home .ex-pill[data-tag="' + first + '"]');
+            if (pill) pill.classList.add('ex-active');
+          }
+          applyFilter();
+        }
       });
     }
 
@@ -127,9 +162,8 @@
       allBtn.innerHTML = 'All <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + allCount + '</span>';
       allBtn.addEventListener('click', function () {
         activeTags.clear();
-        document.querySelectorAll('#ex-tag-bar-home .ex-pill[data-tag]').forEach(function (p) {
-          if (p.dataset.tag !== '') p.classList.remove('ex-active');
-        });
+        document.querySelectorAll('#ex-tag-bar-home .ex-pill').forEach(function (p) { p.classList.remove('ex-active'); });
+        allBtn.classList.add('ex-active');
         applyFilter();
       });
       bar.appendChild(allBtn);
@@ -140,10 +174,17 @@
         pill.dataset.tag = tag;
         pill.innerHTML = escHtml(tag) + ' <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + count + '</span>';
         pill.addEventListener('click', function () {
-          if (activeTags.has(tag)) {
-            activeTags.delete(tag);
-            pill.classList.remove('ex-active');
+          if (multiMode) {
+            if (activeTags.has(tag)) {
+              activeTags.delete(tag);
+              pill.classList.remove('ex-active');
+            } else {
+              activeTags.add(tag);
+              pill.classList.add('ex-active');
+            }
           } else {
+            activeTags.clear();
+            document.querySelectorAll('#ex-tag-bar-home .ex-pill').forEach(function (p) { p.classList.remove('ex-active'); });
             activeTags.add(tag);
             pill.classList.add('ex-active');
           }
@@ -151,6 +192,7 @@
         });
         bar.appendChild(pill);
       });
+      initModeToggle();
     }
 
     /* ── Render cards ────────────────────────────────────────────── */
