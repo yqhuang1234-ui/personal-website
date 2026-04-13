@@ -58,7 +58,7 @@
 
     /* ── iframe thumbnail lookup (keyed by post URL) ─────────────── */
     var POST_IFRAMES = {
-      '/2026/04/13/probability-distributions/': '/statistical theory/probability_distributions.html'
+      '/2026/04/14/probability-distributions/': '/statistical theory/probability_distributions.html'
     };
 
     /* ── Parse local-search.xml → post items ────────────────────── */
