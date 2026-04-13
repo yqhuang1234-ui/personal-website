@@ -119,7 +119,7 @@
       var allBtn = document.createElement('span');
       allBtn.className = 'ex-pill ex-active';
       allBtn.dataset.tag = '';
-      allBtn.innerHTML = 'All <span class="ex-pill-count">' + allCount + '</span>';
+      allBtn.innerHTML = 'All <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + allCount + '</span>';
       allBtn.addEventListener('click', function () { applyFilter(''); });
       bar.appendChild(allBtn);
       sorted.forEach(function (entry) {
@@ -127,7 +127,7 @@
         var pill = document.createElement('span');
         pill.className = 'ex-pill';
         pill.dataset.tag = tag;
-        pill.innerHTML = escHtml(tag) + ' <span class="ex-pill-count">' + count + '</span>';
+        pill.innerHTML = escHtml(tag) + ' <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + count + '</span>';
         pill.addEventListener('click', function () { applyFilter(tag); });
         bar.appendChild(pill);
       });
