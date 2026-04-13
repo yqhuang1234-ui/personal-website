@@ -6,6 +6,7 @@ tags:
   - statistical-theory
   - learning-notes
   - blog
+index_img: /img/posts/probability-distributions.jpg
 excerpt: >
   An interactive reference covering discrete and continuous probability distributions:
   PMF/PDF, CDF, moments, and interactive charts for each distribution family.
