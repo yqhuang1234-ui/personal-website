@@ -6,7 +6,8 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "prepare": "patch -p1 --forward --reject-file=/dev/null < patches/local-search-img.patch || true"
   },
   "hexo": {
     "version": "8.1.1"

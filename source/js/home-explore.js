@@ -53,15 +53,6 @@
     utterScript.setAttribute('crossorigin', 'anonymous');
     document.getElementById('home-comments').appendChild(utterScript);
 
-    /* ── Cover image lookup (keyed by post URL) ─────────────────── */
-    var POST_IMGS = {
-      '/2026/04/03/neural-networks-deep-learning-notes/': '/img/posts/neural-networks.jpg',
-      '/2026/04/14/probability-distributions/': '/img/posts/probability-distributions.jpg'
-    };
-
-    /* ── iframe thumbnail lookup (keyed by post URL) ─────────────── */
-    var POST_IFRAMES = {};
-
     /* ── Parse local-search.xml → post items ────────────────────── */
     function parsePosts(xmlText) {
       var parser = new DOMParser();
@@ -75,11 +66,12 @@
         var desc = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
         var rawUrl = (e.querySelector('url') || {}).textContent || '#';
         var url = rawUrl.replace(/^https?:\/\/[^\/]+/, '') || rawUrl;
+        var img = (e.querySelector('img') || {}).textContent || null;
         return {
           type: 'blog',
           title: (e.querySelector('title') || {}).textContent || 'Untitled',
           url: url,
-          img: POST_IMGS[url] || null,
+          img: img,
           desc: desc,
           tags: tags
         };

@@ -1,0 +1,4 @@
+--- a/node_modules/hexo-theme-fluid/source/xml/local-search.xml
++++ b/node_modules/hexo-theme-fluid/source/xml/local-search.xml
+@@ -9,0 +10 @@
++    {% if post.index_img %}<img>{{ post.index_img }}</img>{% endif %}
