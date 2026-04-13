@@ -390,8 +390,8 @@ date: 2026-04-02 05:12:39
 <div class="ab-section">
 <p class="ab-section-title">Research Interests</p>
 <ul class="ab-research-list">
-  <li><strong>Deep learning for biomedical data, with a focus on medical imaging</li>
-  <li><strong>passionate about making data approachable and creatively explaining complex concepts</li>
+  <li>Deep learning for biomedical data, with a focus on medical imaging</li>
+  <li>passionate about making data approachable and creatively explaining complex concepts</li>
 </ul> 
 </div>
 
