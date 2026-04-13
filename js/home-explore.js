@@ -196,12 +196,9 @@
         card.href = item.url;
         card.className = 'ex-card';
         card.dataset.tags = JSON.stringify(item.tags || []);
-        var iframeSrc = POST_IFRAMES[item.url];
-        var imgHtml = iframeSrc
-          ? '<div class="ex-card-iframe-wrap"><iframe src="' + escHtml(iframeSrc) + '" title="' + escHtml(item.title) + ' preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>'
-          : item.img
-            ? '<img class="ex-card-img" src="' + escHtml(item.img) + '" alt="' + escHtml(item.title) + '" loading="lazy" onerror="this.style.display=\'none\'">'
-            : '';
+        var imgHtml = item.img
+          ? '<img class="ex-card-img" src="' + escHtml(item.img) + '" alt="' + escHtml(item.title) + '" loading="lazy" onerror="this.style.display=\'none\'">'
+          : '';
         card.innerHTML =
           imgHtml +
           '<span class="ex-badge ex-badge-' + item.type + '">' + (item.type === 'blog' ? 'Blog' : 'Project') + '</span>' +
