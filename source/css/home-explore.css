@@ -181,6 +181,28 @@
   margin: -1.1rem -1.25rem 0.75rem;
 }
 
+/* iframe thumbnail — scaled-down live preview */
+.ex-card-iframe-wrap {
+  width: calc(100% + 2.5rem);
+  height: 160px;
+  margin: -1.1rem -1.25rem 0.75rem;
+  overflow: hidden;
+  position: relative;
+  background: #faf9f6;
+  border-bottom: 1px solid #E8E2D9;
+  pointer-events: none;
+}
+
+.ex-card-iframe-wrap iframe {
+  width: 1280px;
+  height: 800px;
+  transform-origin: top left;
+  transform: scale(0.21);
+  border: none;
+  display: block;
+  pointer-events: none;
+}
+
 .ex-card-tags {
   display: flex;
   flex-wrap: wrap;
