@@ -6,6 +6,8 @@ tags:
   - statistical-theory
   - learning-notes
   - blog
+categories:
+  - Statistical Theory
 index_img: /img/posts/probability-distributions.jpg
 excerpt: >
   Built for my Statistical Theory class — an interactive reference where you can shift parameters and watch distributions change in real time.

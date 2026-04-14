@@ -5,9 +5,8 @@ tags:
   - deep-learning
   - learning-notes
   - blog
-  - coursera deep learning specialization
 categories:
-  - Learning Notes
+  - Coursera Deep Learning Specialization
 index_img: /img/posts/coursera-deep-learning-1.svg
 excerpt: >
   Notes from Course 1 of Andrew Ng's Deep Learning Specialization on Coursera — covering neural network programming basics, shallow networks, and deep network architecture across weeks 2–4.
