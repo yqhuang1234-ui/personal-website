@@ -8,11 +8,10 @@ tags:
   - blog
 index_img: /img/posts/probability-distributions.jpg
 excerpt: >
-  An interactive reference covering discrete and continuous probability distributions:
-  PMF/PDF, CDF, moments, and interactive charts for each distribution family.
+  Built for my Statistical Theory class — an interactive reference where you can shift parameters and watch distributions change in real time.
 ---
 
-Interactive reference notes on probability distributions — covering discrete and continuous families with visualizations.
+In my Statistical Theory class, we covered a lot of distributions — and I kept flipping back and forth between notes trying to remember what each one looked like, how parameters changed the shape, or what the CDF looked like for a specific case. So I built this as a living reference I could actually use during class. The interactive part matters: you can drag the parameters and watch the distribution shift in real time, which makes it a lot easier to build intuition than just memorizing formulas. Covers both discrete and continuous families.
 
 <style>
 .st-card {

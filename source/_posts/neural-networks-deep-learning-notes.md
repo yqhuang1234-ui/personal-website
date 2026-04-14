@@ -9,17 +9,12 @@ categories:
   - Learning Notes
 index_img: /img/posts/neural-networks.jpg
 excerpt: >
-  Interactive notes on neural network fundamentals: activation functions, backpropagation, tensor dimensions, and annotated network diagrams.
+  Four interactive tools I built while learning deep learning fundamentals — activation functions, backprop walkthrough, dimension checker, and an annotated network diagram.
 ---
 
-Personal notes on neural network fundamentals, written as interactive HTML references.
+When I was going through the deep learning fundamentals, I kept wishing I had something I could actually poke at — not just read. So I built these. Each one started as a quick reference for myself and grew from there. They're interactive in the sense that you can change values and see things update, which honestly helped me build intuition faster than staring at equations.
 
-Topics covered:
-
-- **Activation Functions & Gradients** — Sigmoid, Tanh, ReLU, Leaky ReLU with gradient visualizations
-- **Backpropagation** — Chain rule, forward/backward pass, and all six gradient equations
-- **Dimension Checker** — Interactive tool for tensor shapes across any network architecture
-- **Annotated Network Diagram** — Clickable multi-layer network with step-by-step computations
+Four tools here: activation functions with gradient visualizations, a step-by-step backprop walkthrough, a dimension checker for any network architecture, and an annotated network diagram you can click through. Click any card to open it.
 
 <style>
 /* ── Deep-learning notes gallery ─────────────────────────────────────── */
