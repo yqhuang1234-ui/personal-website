@@ -6,7 +6,7 @@ tags:
   - learning-notes
   - blog
 categories:
-  - Learning Notes
+  - Coursera Deep Learning Specialization
 index_img: /img/posts/neural-networks.jpg
 excerpt: >
   Four interactive tools I built while learning deep learning fundamentals — activation functions, backprop walkthrough, dimension checker, and an annotated network diagram.
