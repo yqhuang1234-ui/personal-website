@@ -275,7 +275,29 @@
       var allItems = posts.concat(projectItems);
       renderTagBar(buildTagMap(allItems));
       renderCards(allItems);
+      applyFilter();
     });
+
+    /* ── Recent Blog preview (4 posts, then Show all) ────────────── */
+    (function () {
+      var blogCards = Array.from(target.querySelectorAll('.index-card'));
+      if (blogCards.length <= PREVIEW_COUNT) return;
+
+      blogCards.forEach(function (card, i) {
+        if (i >= PREVIEW_COUNT) card.classList.add('ex-preview-hidden');
+      });
+
+      var btn = document.createElement('button');
+      btn.className = 'ex-show-all-btn';
+      btn.textContent = 'Show all ' + blogCards.length + ' posts \u2192';
+      btn.addEventListener('click', function () {
+        blogCards.forEach(function (card) { card.classList.remove('ex-preview-hidden'); });
+        btn.style.display = 'none';
+      });
+
+      var lastCard = blogCards[blogCards.length - 1];
+      lastCard.parentNode.insertBefore(btn, lastCard.nextSibling);
+    }());
   }
 
   if (document.readyState === 'loading') {
