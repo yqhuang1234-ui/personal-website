@@ -1,5 +1,5 @@
 ---
-title: "Neural Networks and Deep Learning – Course Notes"
+title: "Interactive Playground - Neural Networks and Deep Learning"
 date: 2026-04-03 12:00:00
 tags:
   - deep-learning
