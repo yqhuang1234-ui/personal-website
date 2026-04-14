@@ -97,18 +97,48 @@
     }
 
     /* ── Filter state ────────────────────────────────────────────── */
+    var PREVIEW_COUNT = 4;
     var multiMode = false;
+    var previewMode = true;
     var activeTags = new Set();
 
     /* ── Apply filter (show/hide cards + update pills) ───────────── */
     function applyFilter() {
       var allBtn = document.querySelector('#ex-tag-bar-home .ex-pill[data-tag=""]');
       if (allBtn) allBtn.classList.toggle('ex-active', activeTags.size === 0);
-      document.querySelectorAll('#ex-grid-home .ex-card').forEach(function (card) {
+
+      var cards = Array.from(document.querySelectorAll('#ex-grid-home .ex-card'));
+
+      /* Tag filter */
+      cards.forEach(function (card) {
         var tags = JSON.parse(card.dataset.tags || '[]');
         var hide = activeTags.size > 0 && !tags.some(function (t) { return activeTags.has(t); });
         card.classList.toggle('ex-hidden', hide);
       });
+
+      /* Preview limit — only when no tag active */
+      if (activeTags.size === 0 && previewMode) {
+        var shown = 0;
+        cards.forEach(function (card) {
+          if (!card.classList.contains('ex-hidden')) {
+            shown++;
+            card.classList.toggle('ex-preview-hidden', shown > PREVIEW_COUNT);
+          } else {
+            card.classList.remove('ex-preview-hidden');
+          }
+        });
+      } else {
+        cards.forEach(function (card) { card.classList.remove('ex-preview-hidden'); });
+      }
+
+      /* Show-all button */
+      var showAllBtn = document.getElementById('ex-show-all-btn');
+      if (showAllBtn) {
+        var visibleTotal = cards.filter(function (c) { return !c.classList.contains('ex-hidden'); }).length;
+        var show = activeTags.size === 0 && previewMode && visibleTotal > PREVIEW_COUNT;
+        showAllBtn.style.display = show ? 'block' : 'none';
+        if (show) showAllBtn.textContent = 'Show all ' + visibleTotal + ' \u2192';
+      }
     }
 
     /* ── Toggle select mode ──────────────────────────────────────── */
@@ -154,6 +184,7 @@
       allBtn.innerHTML = 'All <span class="ex-pill-sep">\u00b7</span><span class="ex-pill-count">' + allCount + '</span>';
       allBtn.addEventListener('click', function () {
         activeTags.clear();
+        previewMode = true;
         document.querySelectorAll('#ex-tag-bar-home .ex-pill').forEach(function (p) { p.classList.remove('ex-active'); });
         allBtn.classList.add('ex-active');
         applyFilter();
@@ -209,6 +240,19 @@
       });
       if (grid.children.length === 0) {
         grid.innerHTML = '<div class="ex-loading">No results.</div>';
+      }
+
+      /* "Show all" button — inserted once after the grid */
+      if (!document.getElementById('ex-show-all-btn')) {
+        var showAllBtn = document.createElement('button');
+        showAllBtn.id = 'ex-show-all-btn';
+        showAllBtn.className = 'ex-show-all-btn';
+        showAllBtn.style.display = 'none';
+        showAllBtn.addEventListener('click', function () {
+          previewMode = false;
+          applyFilter();
+        });
+        grid.parentNode.insertBefore(showAllBtn, grid.nextSibling);
       }
     }
 

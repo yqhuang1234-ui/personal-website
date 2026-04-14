@@ -170,6 +170,29 @@
   visibility: hidden;
 }
 
+.ex-card.ex-preview-hidden {
+  display: none;
+}
+
+.ex-show-all-btn {
+  display: block;
+  margin: 1.25rem auto 0;
+  padding: 0.45em 1.4em;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #CC785C;
+  background: transparent;
+  border: 1px solid #CC785C;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ex-show-all-btn:hover {
+  background: #CC785C;
+  color: #fff;
+}
+
 /* Badge */
 .ex-badge {
   position: absolute;
