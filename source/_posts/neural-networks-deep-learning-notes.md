@@ -73,6 +73,13 @@ Four tools here: activation functions with gradient visualizations, a step-by-st
   display: block;
 }
 
+.dl-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Full-card overlay link — sits above the iframe */
 .dl-overlay {
   position: absolute;
@@ -155,13 +162,13 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
   <!-- 2026-04-15 -->
   <div class="dl-card">
     <div class="dl-thumb">
-      <a class="dl-overlay" href="/deep-learning/backprop_explorer.html" aria-label="Open Backpropagation Explorer"></a>
-      <iframe src="/deep-learning/backprop_explorer.html" title="Backpropagation Explorer preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+      <a class="dl-overlay" href="/deep-learning/backprop_dnn_complete.html" aria-label="Open Backpropagation Complete Guide"></a>
+      <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation Complete Guide preview">
     </div>
     <div class="dl-body">
-      <p class="dl-title">Backpropagation Explorer</p>
+      <p class="dl-title">Backpropagation Complete Guide</p>
       <p class="dl-desc">8-tab deep dive into backprop — every formula, every dimension, every index. Covers notation, cheat sheet, linear/activation backward, L-model backward, and parameter update.</p>
-      <a class="dl-cta" href="/deep-learning/backprop_explorer.html">Open &rarr;</a>
+      <a class="dl-cta" href="/deep-learning/backprop_dnn_complete.html">Open &rarr;</a>
     </div>
   </div>
 
