@@ -22,6 +22,18 @@ Week 2 is where things start clicking. It introduces logistic regression as a si
 
 📖 **[Full notes on Notion →](https://yanqihuang.notion.site/Week-2-Basics-of-Neural-Network-Programming-Complete-Guide-32853115b8b8812cb7e3fe9e2f0136ed)**
 
+<div class="nb-card">
+  <div class="nb-card-header">
+    <span class="nb-label">Jupyter Notebook · Week 2</span>
+    <span class="nb-filename">Logistic_Regression_with_a_Neural_Network_mindset.ipynb</span>
+  </div>
+  <p class="nb-desc">Implements logistic regression from scratch — forward propagation, cost function, and gradient descent — framed as a single-neuron network applied to image classification. Includes a full walkthrough of how vectorization replaces explicit loops for efficient computation.</p>
+  <div class="nb-actions">
+    <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%202%20Logistic_Regression_with_a_Neural_Network_mindset.ipynb" target="_blank" rel="noopener">View in browser →</a>
+    <a class="nb-btn nb-btn-dl" href="/files/week%202%20Logistic_Regression_with_a_Neural_Network_mindset.ipynb" download="Logistic_Regression_with_a_Neural_Network_mindset.ipynb">Download .ipynb</a>
+  </div>
+</div>
+
 ---
 
 ## Week 3 — Shallow Neural Networks
@@ -29,6 +41,18 @@ Week 2 is where things start clicking. It introduces logistic regression as a si
 Week 3 extends the single-neuron picture into a two-layer network. You work through how activation functions like tanh and ReLU change the gradient flow, why a hidden layer actually matters, and how to derive and implement the backprop equations by hand. It's one of those weeks where doing the math yourself — rather than just reading it — makes a real difference.
 
 📖 **[Full notes on Notion →](https://www.notion.so/yanqihuang/Week-3-Shallow-Neural-Networks-Complete-Guide-32d53115b8b880dea091df09e8db5ebb)**
+
+<div class="nb-card">
+  <div class="nb-card-header">
+    <span class="nb-label">Jupyter Notebook · Week 3</span>
+    <span class="nb-filename">Planar_data_classification_with_one_hidden_layer.ipynb</span>
+  </div>
+  <p class="nb-desc">Builds a two-class classifier for non-linearly separable planar data using a shallow network with one hidden layer. Compares different activation functions (tanh vs. sigmoid) and shows why even a single hidden layer dramatically outperforms logistic regression on this task.</p>
+  <div class="nb-actions">
+    <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%203%20Planar_data_classification_with_one_hidden_layer.ipynb" target="_blank" rel="noopener">View in browser →</a>
+    <a class="nb-btn nb-btn-dl" href="/files/week%203%20Planar_data_classification_with_one_hidden_layer.ipynb" download="Planar_data_classification_with_one_hidden_layer.ipynb">Download .ipynb</a>
+  </div>
+</div>
 
 ---
 
@@ -38,7 +62,82 @@ Week 4 generalizes everything to an L-layer network. The notation gets a bit hea
 
 📖 **[Full notes on Notion →](https://www.notion.so/yanqihuang/Week-4-deep-neural-networks-33d53115b8b880ad9434ffee80234d4c)**
 
+<div class="nb-card">
+  <div class="nb-card-header">
+    <span class="nb-label">Jupyter Notebook · Week 4</span>
+    <span class="nb-filename">Building_your_Deep_Neural_Network_Step_by_Step.ipynb</span>
+  </div>
+  <p class="nb-desc">Implements all the core building blocks of an L-layer deep neural network step by step — linear forward, activation forward, cost computation, linear backward, activation backward, and parameter updates. The resulting modular framework works for any network depth and feeds directly into the Week 4 application assignment.</p>
+  <div class="nb-actions">
+    <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%204%20Building_your_Deep_Neural_Network_Step_by_Step.ipynb" target="_blank" rel="noopener">View in browser →</a>
+    <a class="nb-btn nb-btn-dl" href="/files/week%204%20Building_your_Deep_Neural_Network_Step_by_Step.ipynb" download="Building_your_Deep_Neural_Network_Step_by_Step.ipynb">Download .ipynb</a>
+  </div>
+</div>
+
 <style>
+.nb-card {
+  border: 1px solid #E8E2D9;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  background: #FAFAF8;
+  margin: 1rem 0 1.5rem;
+}
+.nb-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+.nb-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #CC785C;
+  white-space: nowrap;
+}
+.nb-filename {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #555;
+}
+.nb-desc {
+  font-size: 0.875rem;
+  color: #4A4A4A;
+  line-height: 1.6;
+  margin: 0 0 0.9rem;
+}
+.nb-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.nb-btn {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.nb-btn-view {
+  background: #CC785C;
+  color: #fff;
+}
+.nb-btn-view:hover {
+  background: #b5623e;
+  color: #fff;
+}
+.nb-btn-dl {
+  background: #F0EDE8;
+  color: #333;
+}
+.nb-btn-dl:hover {
+  background: #E2DDD6;
+  color: #333;
+}
 .cw4-card {
   display: flex;
   border: 1px solid #E8E2D9;
