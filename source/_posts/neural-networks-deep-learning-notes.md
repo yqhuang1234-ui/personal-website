@@ -152,6 +152,20 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
 
 <div class="dl-grid">
 
+  <!-- 2026-04-15 -->
+  <div class="dl-card">
+    <div class="dl-thumb">
+      <a class="dl-overlay" href="/deep-learning/backprop_explorer.html" aria-label="Open Backpropagation Explorer"></a>
+      <iframe src="/deep-learning/backprop_explorer.html" title="Backpropagation Explorer preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+    </div>
+    <div class="dl-body">
+      <p class="dl-title">Backpropagation Explorer</p>
+      <p class="dl-desc">8-tab deep dive into backprop — every formula, every dimension, every index. Covers notation, cheat sheet, linear/activation backward, L-model backward, and parameter update.</p>
+      <a class="dl-cta" href="/deep-learning/backprop_explorer.html">Open &rarr;</a>
+    </div>
+  </div>
+
+  <!-- 2026-04-03 -->
   <div class="dl-card">
     <div class="dl-thumb">
       <a class="dl-overlay" href="/deep-learning/activation_functions.html" aria-label="Open Activation Functions &amp; Gradients"></a>
@@ -164,6 +178,7 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
     </div>
   </div>
 
+  <!-- 2026-04-03 -->
   <div class="dl-card">
     <div class="dl-thumb">
       <a class="dl-overlay" href="/deep-learning/backprop_explainer.html" aria-label="Open Backpropagation — Interactive Deep Dive"></a>
@@ -176,6 +191,7 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
     </div>
   </div>
 
+  <!-- 2026-04-03 -->
   <div class="dl-card">
     <div class="dl-thumb">
       <a class="dl-overlay" href="/deep-learning/dimension_checker.html" aria-label="Open Neural Network Dimension Checker"></a>
@@ -188,6 +204,7 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
     </div>
   </div>
 
+  <!-- 2026-04-03 -->
   <div class="dl-card">
     <div class="dl-thumb">
       <a class="dl-overlay" href="/deep-learning/neural_network_annotated.html" aria-label="Open Neural Network — Annotated"></a>
