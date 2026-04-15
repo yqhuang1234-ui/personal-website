@@ -27,7 +27,7 @@ Week 2 is where things start clicking. It introduces logistic regression as a si
     <span class="nb-label">Jupyter Notebook · Week 2</span>
     <span class="nb-filename">Logistic_Regression_with_a_Neural_Network_mindset.ipynb</span>
   </div>
-  <p class="nb-desc">Implements logistic regression from scratch — forward propagation, cost function, and gradient descent — framed as a single-neuron network applied to image classification. Includes a full walkthrough of how vectorization replaces explicit loops for efficient computation.</p>
+  <p class="nb-desc">Logistic regression as a neural network — forward pass, cost, and gradient descent applied to image classification.</p>
   <div class="nb-actions">
     <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%202%20Logistic_Regression_with_a_Neural_Network_mindset.ipynb" target="_blank" rel="noopener">View in browser →</a>
     <a class="nb-btn nb-btn-dl" href="/files/week%202%20Logistic_Regression_with_a_Neural_Network_mindset.ipynb" download="Logistic_Regression_with_a_Neural_Network_mindset.ipynb">Download .ipynb</a>
@@ -47,7 +47,7 @@ Week 3 extends the single-neuron picture into a two-layer network. You work thro
     <span class="nb-label">Jupyter Notebook · Week 3</span>
     <span class="nb-filename">Planar_data_classification_with_one_hidden_layer.ipynb</span>
   </div>
-  <p class="nb-desc">Builds a two-class classifier for non-linearly separable planar data using a shallow network with one hidden layer. Compares different activation functions (tanh vs. sigmoid) and shows why even a single hidden layer dramatically outperforms logistic regression on this task.</p>
+  <p class="nb-desc">Two-class classification on planar data using a one-hidden-layer network, with activation function comparisons.</p>
   <div class="nb-actions">
     <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%203%20Planar_data_classification_with_one_hidden_layer.ipynb" target="_blank" rel="noopener">View in browser →</a>
     <a class="nb-btn nb-btn-dl" href="/files/week%203%20Planar_data_classification_with_one_hidden_layer.ipynb" download="Planar_data_classification_with_one_hidden_layer.ipynb">Download .ipynb</a>
@@ -67,7 +67,7 @@ Week 4 generalizes everything to an L-layer network. The notation gets a bit hea
     <span class="nb-label">Jupyter Notebook · Week 4</span>
     <span class="nb-filename">Building_your_Deep_Neural_Network_Step_by_Step.ipynb</span>
   </div>
-  <p class="nb-desc">Implements all the core building blocks of an L-layer deep neural network step by step — linear forward, activation forward, cost computation, linear backward, activation backward, and parameter updates. The resulting modular framework works for any network depth and feeds directly into the Week 4 application assignment.</p>
+  <p class="nb-desc">Builds the core components of an L-layer network from scratch — forward, backward, and parameter update for any depth.</p>
   <div class="nb-actions">
     <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%204%20Building_your_Deep_Neural_Network_Step_by_Step.ipynb" target="_blank" rel="noopener">View in browser →</a>
     <a class="nb-btn nb-btn-dl" href="/files/week%204%20Building_your_Deep_Neural_Network_Step_by_Step.ipynb" download="Building_your_Deep_Neural_Network_Step_by_Step.ipynb">Download .ipynb</a>
