@@ -162,11 +162,11 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
   <!-- 2026-04-15 -->
   <div class="dl-card">
     <div class="dl-thumb">
-      <a class="dl-overlay" href="/deep-learning/backprop_dnn_complete.html" aria-label="Open Backpropagation Complete Guide"></a>
-      <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation Complete Guide preview">
+      <a class="dl-overlay" href="/deep-learning/backprop_dnn_complete.html" aria-label="Open Backpropagation — Code & Implementation"></a>
+      <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation — Code & Implementation preview">
     </div>
     <div class="dl-body">
-      <p class="dl-title">Backpropagation Complete Guide</p>
+      <p class="dl-title">Backpropagation — Code & Implementation</p>
       <p class="dl-desc">8-tab deep dive into backprop — every formula, every dimension, every index. Covers notation, cheat sheet, linear/activation backward, L-model backward, and parameter update.</p>
       <a class="dl-cta" href="/deep-learning/backprop_dnn_complete.html">Open &rarr;</a>
     </div>
@@ -188,11 +188,11 @@ html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }
   <!-- 2026-04-03 -->
   <div class="dl-card">
     <div class="dl-thumb">
-      <a class="dl-overlay" href="/deep-learning/backprop_explainer.html" aria-label="Open Backpropagation — Interactive Deep Dive"></a>
+      <a class="dl-overlay" href="/deep-learning/backprop_explainer.html" aria-label="Open Backpropagation — Math & Intuition"></a>
       <iframe src="/deep-learning/backprop_explainer.html" title="Backpropagation preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
     </div>
     <div class="dl-body">
-      <p class="dl-title">Backpropagation — Interactive Deep Dive</p>
+      <p class="dl-title">Backpropagation — Math & Intuition</p>
       <p class="dl-desc">Chain rule, forward and backward pass, and all six gradient equations with step-by-step walkthrough.</p>
       <a class="dl-cta" href="/deep-learning/backprop_explainer.html">Open &rarr;</a>
     </div>

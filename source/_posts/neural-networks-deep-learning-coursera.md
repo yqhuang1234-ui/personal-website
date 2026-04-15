@@ -111,11 +111,11 @@ Week 4 generalizes everything to an L-layer network. The notation gets a bit hea
 
 <a class="cw4-card" href="/deep-learning/backprop_dnn_complete.html">
   <div class="cw4-thumb">
-    <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation Complete Guide">
+    <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation — Code & Implementation">
   </div>
   <div class="cw4-body">
     <p class="cw4-label">Interactive Tool · Week 4</p>
-    <p class="cw4-title">Backpropagation Complete Guide</p>
+    <p class="cw4-title">Backpropagation — Code & Implementation</p>
     <p class="cw4-desc">8-tab interactive reference — every formula, every dimension, every index. Covers notation, cheat sheet, linear/activation backward, L-model backward, and parameter update.</p>
     <p class="cw4-cta">Open →</p>
   </div>
