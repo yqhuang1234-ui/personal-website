@@ -38,6 +38,89 @@ Week 4 generalizes everything to an L-layer network. The notation gets a bit hea
 
 📖 **[Full notes on Notion →](https://www.notion.so/yanqihuang/Week-4-deep-neural-networks-33d53115b8b880ad9434ffee80234d4c)**
 
+<style>
+.cw4-card {
+  display: flex;
+  border: 1px solid #E8E2D9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  margin: 1.5rem 0 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.cw4-card:hover {
+  transform: translateY(-3px);
+  border-color: #CC785C;
+  box-shadow: 0 8px 24px rgba(204,120,92,0.12);
+}
+.cw4-thumb {
+  width: 220px;
+  min-width: 220px;
+  overflow: hidden;
+  border-right: 1px solid #E8E2D9;
+  flex-shrink: 0;
+}
+.cw4-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cw4-body {
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.cw4-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #CC785C;
+  margin: 0;
+}
+.cw4-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin: 0;
+  line-height: 1.35;
+}
+.cw4-desc {
+  font-size: 0.85rem;
+  color: #5F5F5F;
+  margin: 0;
+  line-height: 1.55;
+}
+.cw4-cta {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #CC785C;
+  margin: 0.25rem 0 0;
+}
+@media (max-width: 600px) {
+  .cw4-card { flex-direction: column; }
+  .cw4-thumb { width: 100%; min-width: unset; height: 140px; border-right: none; border-bottom: 1px solid #E8E2D9; }
+}
+</style>
+
+<a class="cw4-card" href="/deep-learning/backprop_dnn_complete.html">
+  <div class="cw4-thumb">
+    <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation Complete Guide">
+  </div>
+  <div class="cw4-body">
+    <p class="cw4-label">Interactive Tool · Week 4</p>
+    <p class="cw4-title">Backpropagation Complete Guide</p>
+    <p class="cw4-desc">8-tab interactive reference — every formula, every dimension, every index. Covers notation, cheat sheet, linear/activation backward, L-model backward, and parameter update.</p>
+    <p class="cw4-cta">Open →</p>
+  </div>
+</a>
+
 ---
 
 If you want a more visual take on the fundamentals, I also put together an [Interactive Playground — Neural Networks and Deep Learning](https://yqhuang1234-ui.github.io/2026/04/03/neural-networks-deep-learning-notes/) with annotated diagrams and activation function visualizations.
