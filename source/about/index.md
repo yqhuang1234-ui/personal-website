@@ -300,7 +300,7 @@ date: 2026-04-02 05:12:39
 
   <div class="ab-step">
     <p class="ab-step-year">2018 – 2025 </p>
-    <p class="ab-step-title">Data Scientist (Hughes, Altria)</p>
+    <p class="ab-step-title">Sr. Data Scientist (Hughes, Altria)</p>
     <p class="ab-step-desc">Shipped ML models in production, worked with large-scale datasets, and developed intuition for what breaks in the real world.</p>
   </div>
 
@@ -308,12 +308,6 @@ date: 2026-04-02 05:12:39
     <p class="ab-step-year">2025 – Present</p>
     <p class="ab-step-title">M.S. Biostatistics (CU Anschutz medical campus)</p>
     <p class="ab-step-desc">Bringing data science into the biomedical world — rigorous methods, clinical data, and the math behind why things work.</p>
-  </div>
-
-  <div class="ab-step">
-    <p class="ab-step-year">Next</p>
-    <p class="ab-step-title">PhD (Planned)</p>
-    <p class="ab-step-desc">Research at the intersection of machine learning and biomedical data — methods that are both principled and practically useful.</p>
   </div>
 
 </div>
