@@ -234,7 +234,7 @@ Week 4 generalizes everything to an L-layer network. The notation gets a bit hea
 
 ---
 
-If you want a more visual take on the fundamentals, I also put together an [Interactive Playground — Neural Networks and Deep Learning](https://yqhuang1234-ui.github.io/2026/04/03/neural-networks-deep-learning-notes/) with annotated diagrams and activation function visualizations.
+If you want a more visual take on the fundamentals, I also put together an [Interactive Playground — Neural Networks and Deep Learning](https://yqhuang1234-ui.github.io/2026/04/04/neural-networks-deep-learning-notes/) with annotated diagrams and activation function visualizations.
 
 These are personal study notes — written to help me remember, not as a textbook replacement. The Notion pages get updated as I revisit the material, so they should stay reasonably current. If something looks off or unclear, it probably means I'm still figuring it out too.
 
