@@ -4,7 +4,17 @@
       "Bash(git commit -m ':*)",
       "Bash(jupyter --version)",
       "Bash(python3 -c \"import nbconvert; print\\(nbconvert.__version__\\)\")",
-      "Bash(npx hexo:*)"
+      "Bash(npx hexo:*)",
+      "Bash(pip3 install:*)",
+      "Bash(jupyter nbconvert:*)",
+      "Bash(sips --version)",
+      "Bash(sips -s format png \"/Users/huangyanqi/Library/CloudStorage/Dropbox/Growing/code/personal-website/source/files/Coursera IOTZ68Z021ZC.pdf\" --out \"/Users/huangyanqi/Library/CloudStorage/Dropbox/Growing/code/personal-website/source/img/posts/coursera-certificate.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/blog/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://yqhuang1234-ui.github.io/blog/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://yqhuang1234-ui.github.io/tags/blog/\")",
+      "Bash(curl -s \"https://yqhuang1234-ui.github.io/blog/\")",
+      "Bash(curl -sL \"https://yqhuang1234-ui.github.io/blog/\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' https://yqhuang1234-ui.github.io__TRACKED_VAR__)"
     ]
   }
 }

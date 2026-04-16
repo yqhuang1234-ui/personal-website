@@ -294,7 +294,7 @@ date: 2026-04-02 05:12:39
 
   <div class="ab-step">
     <p class="ab-step-year">2017 – 2018</p>
-    <p class="ab-step-title">Master of Business Analytics (University of Maryland)</p>
+    <p class="ab-step-title">M.S. Business Analytics (University of Maryland)</p>
     <p class="ab-step-desc">Built the technical foundation — statistics, machine learning, data engineering. Learned to turn messy data into decisions.</p>
   </div>
 
