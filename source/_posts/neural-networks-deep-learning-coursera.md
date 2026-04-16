@@ -22,18 +22,6 @@ Week 2 is where things start clicking. It introduces logistic regression as a si
 
 📖 **[Full notes on Notion →](https://yanqihuang.notion.site/Week-2-Basics-of-Neural-Network-Programming-Complete-Guide-32853115b8b8812cb7e3fe9e2f0136ed)**
 
-<div class="nb-card">
-  <div class="nb-card-header">
-    <span class="nb-label">Jupyter Notebook · Week 2</span>
-    <span class="nb-filename">Logistic_Regression_with_a_Neural_Network_mindset.ipynb</span>
-  </div>
-  <p class="nb-desc">Logistic regression as a neural network — forward pass, cost, and gradient descent applied to image classification.</p>
-  <div class="nb-actions">
-    <a class="nb-btn nb-btn-view" href="/deep-learning/week2_logistic_regression.html" target="_blank" rel="noopener">View in browser →</a>
-    <a class="nb-btn nb-btn-dl" href="/files/week%202%20Logistic_Regression_with_a_Neural_Network_mindset.ipynb" download="Logistic_Regression_with_a_Neural_Network_mindset.ipynb">Download .ipynb</a>
-  </div>
-</div>
-
 ---
 
 ## Week 3 — Shallow Neural Networks
@@ -42,18 +30,6 @@ Week 3 extends the single-neuron picture into a two-layer network. You work thro
 
 📖 **[Full notes on Notion →](https://www.notion.so/yanqihuang/Week-3-Shallow-Neural-Networks-Complete-Guide-32d53115b8b880dea091df09e8db5ebb)**
 
-<div class="nb-card">
-  <div class="nb-card-header">
-    <span class="nb-label">Jupyter Notebook · Week 3</span>
-    <span class="nb-filename">Planar_data_classification_with_one_hidden_layer.ipynb</span>
-  </div>
-  <p class="nb-desc">Two-class classification on planar data using a one-hidden-layer network, with activation function comparisons.</p>
-  <div class="nb-actions">
-    <a class="nb-btn nb-btn-view" href="/deep-learning/week3_planar_data_classification.html" target="_blank" rel="noopener">View in browser →</a>
-    <a class="nb-btn nb-btn-dl" href="/files/week%203%20Planar_data_classification_with_one_hidden_layer.ipynb" download="Planar_data_classification_with_one_hidden_layer.ipynb">Download .ipynb</a>
-  </div>
-</div>
-
 ---
 
 ## Week 4 — Deep Neural Networks
@@ -61,30 +37,6 @@ Week 3 extends the single-neuron picture into a two-layer network. You work thro
 Week 4 generalizes everything to an L-layer network. The notation gets a bit heavy, but the underlying ideas follow the same pattern — forward pass, compute cost, backward pass, update weights. There's also a good section on why depth matters in practice and how to think about what each layer is learning.
 
 📖 **[Full notes on Notion →](https://www.notion.so/yanqihuang/Week-4-deep-neural-networks-33d53115b8b880ad9434ffee80234d4c)**
-
-<div class="nb-card">
-  <div class="nb-card-header">
-    <span class="nb-label">Jupyter Notebook · Week 4</span>
-    <span class="nb-filename">Building_your_Deep_Neural_Network_Step_by_Step.ipynb</span>
-  </div>
-  <p class="nb-desc">Builds the core components of an L-layer network from scratch — forward, backward, and parameter update for any depth.</p>
-  <div class="nb-actions">
-    <a class="nb-btn nb-btn-view" href="/deep-learning/week4_deep_neural_network.html" target="_blank" rel="noopener">View in browser →</a>
-    <a class="nb-btn nb-btn-dl" href="/files/week%204%20Building_your_Deep_Neural_Network_Step_by_Step.ipynb" download="Building_your_Deep_Neural_Network_Step_by_Step.ipynb">Download .ipynb</a>
-  </div>
-</div>
-
-<div class="nb-card">
-  <div class="nb-card-header">
-    <span class="nb-label">Jupyter Notebook · Week 4</span>
-    <span class="nb-filename">Deep_Neural_Network_Application.ipynb</span>
-  </div>
-  <p class="nb-desc">Applies the Week 4 framework to image classification — using a deep network to distinguish cat vs. non-cat images with improved accuracy over logistic regression.</p>
-  <div class="nb-actions">
-    <a class="nb-btn nb-btn-view" href="/deep-learning/week4_deep_neural_network_application.html" target="_blank" rel="noopener">View in browser →</a>
-    <a class="nb-btn nb-btn-dl" href="/files/week%204%20Deep%20Neural%20Network%20-%20Application.ipynb" download="Deep_Neural_Network_Application.ipynb">Download .ipynb</a>
-  </div>
-</div>
 
 <style>
 .nb-card {
