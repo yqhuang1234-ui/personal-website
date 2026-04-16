@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Coursera Course 1 - Neural Networks and Deep Learning</title>
+    <link href="/2026/04/14/neural-networks-deep-learning-coursera/"/>
+    <url>/2026/04/14/neural-networks-deep-learning-coursera/</url>
+    <img>/img/posts/coursera-deep-learning-1.svg</img>
+    
+    <content type="html"><![CDATA[<p>I’ve been working through Andrew Ng’s <a href="https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning">Deep Learning Specialization on Coursera</a>, and this first course does a surprisingly good job of building intuition before throwing equations at you. These are my notes for weeks 2 through 4 — the parts that actually get into building and training networks. I wrote them up in Notion as I went, so they’re more of a living reference than a polished summary. Hopefully useful if you’re going through the same material.</p><hr><h2 id="Week-2-—-Basics-of-Neural-Network-Programming"><a href="#Week-2-—-Basics-of-Neural-Network-Programming" class="headerlink" title="Week 2 — Basics of Neural Network Programming"></a>Week 2 — Basics of Neural Network Programming</h2><p>Week 2 is where things start clicking. It introduces logistic regression as a single neuron, then builds up the full computation graph with a forward pass and backpropagation. The key insight here is learning to think in vectorized operations instead of explicit loops — something that pays off immediately once you start writing real code.</p><p>📖 <strong><a href="https://yanqihuang.notion.site/Week-2-Basics-of-Neural-Network-Programming-Complete-Guide-32853115b8b8812cb7e3fe9e2f0136ed">Full notes on Notion →</a></strong></p><hr><h2 id="Week-3-—-Shallow-Neural-Networks"><a href="#Week-3-—-Shallow-Neural-Networks" class="headerlink" title="Week 3 — Shallow Neural Networks"></a>Week 3 — Shallow Neural Networks</h2><p>Week 3 extends the single-neuron picture into a two-layer network. You work through how activation functions like tanh and ReLU change the gradient flow, why a hidden layer actually matters, and how to derive and implement the backprop equations by hand. It’s one of those weeks where doing the math yourself — rather than just reading it — makes a real difference.</p><p>📖 <strong><a href="https://www.notion.so/yanqihuang/Week-3-Shallow-Neural-Networks-Complete-Guide-32d53115b8b880dea091df09e8db5ebb">Full notes on Notion →</a></strong></p><hr><h2 id="Week-4-—-Deep-Neural-Networks"><a href="#Week-4-—-Deep-Neural-Networks" class="headerlink" title="Week 4 — Deep Neural Networks"></a>Week 4 — Deep Neural Networks</h2><p>Week 4 generalizes everything to an L-layer network. The notation gets a bit heavy, but the underlying ideas follow the same pattern — forward pass, compute cost, backward pass, update weights. There’s also a good section on why depth matters in practice and how to think about what each layer is learning.</p><p>📖 <strong><a href="https://www.notion.so/yanqihuang/Week-4-deep-neural-networks-33d53115b8b880ad9434ffee80234d4c">Full notes on Notion →</a></strong></p><style>.nb-card {  border: 1px solid #E8E2D9;  border-radius: 12px;  padding: 1rem 1.25rem;  background: #FAFAF8;  margin: 1rem 0 1.5rem;}.nb-card-header {  display: flex;  align-items: baseline;  gap: 0.75rem;  margin-bottom: 0.5rem;  flex-wrap: wrap;}.nb-label {  font-size: 0.7rem;  font-weight: 700;  letter-spacing: 0.08em;  text-transform: uppercase;  color: #CC785C;  white-space: nowrap;}.nb-filename {  font-size: 0.8rem;  font-family: monospace;  color: #555;}.nb-desc {  font-size: 0.875rem;  color: #4A4A4A;  line-height: 1.6;  margin: 0 0 0.9rem;}.nb-actions {  display: flex;  gap: 0.6rem;  flex-wrap: wrap;}.nb-btn {  display: inline-block;  padding: 0.35rem 0.9rem;  border-radius: 6px;  font-size: 0.8rem;  font-weight: 500;  text-decoration: none;  transition: background 0.15s, color 0.15s;}.nb-btn-view {  background: #CC785C;  color: #fff;}.nb-btn-view:hover {  background: #b5623e;  color: #fff;}.nb-btn-dl {  background: #F0EDE8;  color: #333;}.nb-btn-dl:hover {  background: #E2DDD6;  color: #333;}.cw4-card {  display: flex;  border: 1px solid #E8E2D9;  border-radius: 14px;  overflow: hidden;  background: #fff;  margin: 1.5rem 0 2rem;  text-decoration: none;  color: inherit;  transition: transform 0.2s ease, border-color 0.2s, box-shadow 0.2s;  box-shadow: 0 1px 4px rgba(0,0,0,0.04);}.cw4-card:hover {  transform: translateY(-3px);  border-color: #CC785C;  box-shadow: 0 8px 24px rgba(204,120,92,0.12);}.cw4-thumb {  width: 220px;  min-width: 220px;  overflow: hidden;  border-right: 1px solid #E8E2D9;  flex-shrink: 0;}.cw4-thumb img {  width: 100%;  height: 100%;  object-fit: cover;  display: block;}.cw4-body {  padding: 1.1rem 1.25rem;  display: flex;  flex-direction: column;  justify-content: center;  gap: 0.4rem;}.cw4-label {  font-size: 0.7rem;  font-weight: 700;  letter-spacing: 0.08em;  text-transform: uppercase;  color: #CC785C;  margin: 0;}.cw4-title {  font-size: 1rem;  font-weight: 700;  color: #1A1A1A;  margin: 0;  line-height: 1.35;}.cw4-desc {  font-size: 0.85rem;  color: #5F5F5F;  margin: 0;  line-height: 1.55;}.cw4-cta {  font-size: 0.8rem;  font-weight: 500;  color: #CC785C;  margin: 0.25rem 0 0;}@media (max-width: 600px) {  .cw4-card { flex-direction: column; }  .cw4-thumb { width: 100%; min-width: unset; height: 140px; border-right: none; border-bottom: 1px solid #E8E2D9; }}</style><a class="cw4-card" href="/deep-learning/backprop_dnn_complete.html">  <div class="cw4-thumb">    <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation — Code & Implementation">  </div>  <div class="cw4-body">    <p class="cw4-label">Interactive Tool · Week 4</p>    <p class="cw4-title">Backpropagation — Code & Implementation</p>    <p class="cw4-desc">8-tab interactive reference — every formula, every dimension, every index. Covers notation, cheat sheet, linear/activation backward, L-model backward, and parameter update.</p>    <p class="cw4-cta">Open →</p>  </div></a><hr><p>If you want a more visual take on the fundamentals, I also put together an <a href="https://yqhuang1234-ui.github.io/2026/04/03/neural-networks-deep-learning-notes/">Interactive Playground — Neural Networks and Deep Learning</a> with annotated diagrams and activation function visualizations.</p><p>These are personal study notes — written to help me remember, not as a textbook replacement. The Notion pages get updated as I revisit the material, so they should stay reasonably current. If something looks off or unclear, it probably means I’m still figuring it out too.</p><hr><h2 id="Certificate"><a href="#Certificate" class="headerlink" title="Certificate"></a>Certificate</h2><img src="/img/posts/coursera-certificate.png" alt="Coursera Certificate — Neural Networks and Deep Learning" style="display:block; max-width:560px; width:100%; margin:0 auto; border:1px solid #E8E2D9; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">]]></content>
+    
+    
+    <categories>
+      
+      <category>Coursera Deep Learning Specialization</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>deep-learning</tag>
+      
+      <tag>learning-notes</tag>
+      
+      <tag>blog</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Probability Distributions – Reference Notes</title>
+    <link href="/2026/04/13/probability-distributions/"/>
+    <url>/2026/04/13/probability-distributions/</url>
+    <img>/img/posts/probability-distributions.jpg</img>
+    
+    <content type="html"><![CDATA[<p>In my Statistical Theory class, we covered a lot of distributions — and I kept flipping back and forth between notes trying to remember what each one looked like, how parameters changed the shape, or what the CDF looked like for a specific case. So I built this as a living reference I could actually use during class. The interactive part matters: you can drag the parameters and watch the distribution shift in real time, which makes it a lot easier to build intuition than just memorizing formulas. Covers both discrete and continuous families.</p><style>.st-card {  position: relative;  background: #ffffff;  border: 1px solid #E8E2D9;  border-radius: 14px;  overflow: hidden;  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;  box-shadow: 0 1px 4px rgba(0,0,0,0.04);  display: flex;  flex-direction: column;  max-width: 480px;  margin: 1.5rem auto 2rem;}.st-card:hover {  transform: translateY(-5px);  border-color: #CC785C;  box-shadow: 0 8px 24px rgba(204,120,92,0.12);}.st-thumb {  position: relative;  width: 100%;  height: 220px;  overflow: hidden;  flex-shrink: 0;  background: #faf9f6;  border-bottom: 1px solid #E8E2D9;}.st-thumb iframe {  width: 1440px;  height: 860px;  transform: scale(0.3111);  transform-origin: top left;  pointer-events: none;  border: none;  display: block;}.st-overlay {  position: absolute;  inset: 0;  z-index: 2;  display: block;}.st-body {  padding: 0.9rem 1.1rem 1rem;  display: flex;  flex-direction: column;  gap: 0.3rem;}.st-title {  font-size: 0.95rem;  font-weight: 600;  color: #1A1A1A;  margin: 0;  line-height: 1.35;}.st-desc {  font-size: 0.82rem;  color: #5F5F5F;  line-height: 1.55;  margin: 0;}.st-cta {  font-size: 0.78rem;  font-weight: 500;  color: #CC785C;  margin: 0.4rem 0 0;  text-decoration: none;  display: inline-block;  position: relative;  z-index: 3;}.st-cta:hover { text-decoration: underline; }@media (prefers-color-scheme: dark) {  html:not([data-user-color-scheme]) .st-card  { background: #242424; border-color: #363636; }  html:not([data-user-color-scheme]) .st-card:hover { border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }  html:not([data-user-color-scheme]) .st-thumb { background: #1A1A1A; border-bottom-color: #363636; }  html:not([data-user-color-scheme]) .st-title { color: #E8E4DC; }  html:not([data-user-color-scheme]) .st-desc  { color: #9B9288; }  html:not([data-user-color-scheme]) .st-cta   { color: #E8917A; }}html[data-user-color-scheme="dark"] .st-card  { background: #242424; border-color: #363636; }html[data-user-color-scheme="dark"] .st-card:hover { border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }html[data-user-color-scheme="dark"] .st-thumb { background: #1A1A1A; border-bottom-color: #363636; }html[data-user-color-scheme="dark"] .st-title { color: #E8E4DC; }html[data-user-color-scheme="dark"] .st-desc  { color: #9B9288; }html[data-user-color-scheme="dark"] .st-cta   { color: #E8917A; }</style><div class="st-card">  <div class="st-thumb">    <a class="st-overlay" href="/statistical theory/probability_distributions.html" aria-label="Open Probability Distributions Reference"></a>    <iframe src="/statistical theory/probability_distributions.html" title="Probability Distributions preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>  </div>  <div class="st-body">    <p class="st-title">Probability Distributions Reference</p>    <p class="st-desc">PMF/PDF, CDF, moments, and interactive charts for discrete and continuous distribution families.</p>    <a class="st-cta" href="/statistical theory/probability_distributions.html">Open full reference &rarr;</a>  </div></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Statistical Theory</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>learning-notes</tag>
+      
+      <tag>blog</tag>
+      
+      <tag>probability</tag>
+      
+      <tag>statistical-theory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Interactive Playground - Neural Networks and Deep Learning</title>
+    <link href="/2026/04/03/neural-networks-deep-learning-notes/"/>
+    <url>/2026/04/03/neural-networks-deep-learning-notes/</url>
+    <img>/img/posts/neural-networks.jpg</img>
+    
+    <content type="html"><![CDATA[<p>When I was going through the deep learning fundamentals, I kept wishing I had something I could actually poke at — not just read. So I built these. Each one started as a quick reference for myself and grew from there. They’re interactive in the sense that you can change values and see things update, which honestly helped me build intuition faster than staring at equations.</p><p>Four tools here: activation functions with gradient visualizations, a step-by-step backprop walkthrough, a dimension checker for any network architecture, and an annotated network diagram you can click through. Click any card to open it.</p><style>/* ── Deep-learning notes gallery ─────────────────────────────────────── *//* Namespace: dl-  (no collision with Fluid theme or projects page styles) */.dl-intro {  font-size: 0.95rem;  color: #5F5F5F;  margin: 0 0 1.5rem;  line-height: 1.6;}.dl-grid {  display: grid;  grid-template-columns: repeat(2, 1fr);  gap: 1.25rem;  margin: 0 0 2rem;}.dl-card {  position: relative;  background: #ffffff;  border: 1px solid #E8E2D9;  border-radius: 14px;  overflow: hidden;  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;  box-shadow: 0 1px 4px rgba(0,0,0,0.04);  display: flex;  flex-direction: column;}.dl-card:hover {  transform: translateY(-5px);  border-color: #CC785C;  box-shadow: 0 8px 24px rgba(204,120,92,0.12);}/* iframe thumbnail wrapper */.dl-thumb {  position: relative;  width: 320px;  height: 191px;  overflow: hidden;  flex-shrink: 0;  background: #1A1A1A;  border-bottom: 1px solid #E8E2D9;}.dl-thumb iframe {  width: 1440px;  height: 860px;  transform: scale(0.2222);  transform-origin: top left;  pointer-events: none;  border: none;  display: block;}.dl-thumb img {  width: 100%;  height: 100%;  object-fit: cover;  display: block;}/* Full-card overlay link — sits above the iframe */.dl-overlay {  position: absolute;  inset: 0;  z-index: 2;  display: block;}/* Card text body */.dl-body {  padding: 0.85rem 1rem 0.9rem;  display: flex;  flex-direction: column;  gap: 0.3rem;  flex: 1;}.dl-title {  font-size: 0.9rem;  font-weight: 600;  color: #1A1A1A;  line-height: 1.35;  margin: 0;}.dl-desc {  font-size: 0.82rem;  color: #5F5F5F;  line-height: 1.55;  margin: 0;  flex: 1;}.dl-cta {  font-size: 0.78rem;  font-weight: 500;  color: #CC785C;  margin: 0.35rem 0 0;  position: relative;  z-index: 3;  text-decoration: none;  display: inline-block;}.dl-cta:hover {  text-decoration: underline;}/* Dark mode — auto */@media (prefers-color-scheme: dark) {  html:not([data-user-color-scheme]) .dl-intro { color: #9B9288; }  html:not([data-user-color-scheme]) .dl-card  { background: #242424; border-color: #363636; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }  html:not([data-user-color-scheme]) .dl-card:hover { transform: translateY(-5px); border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }  html:not([data-user-color-scheme]) .dl-thumb { border-bottom-color: #363636; }  html:not([data-user-color-scheme]) .dl-title { color: #E8E4DC; }  html:not([data-user-color-scheme]) .dl-desc  { color: #9B9288; }  html:not([data-user-color-scheme]) .dl-cta   { color: #E8917A; }}/* Dark mode — manual toggle */html[data-user-color-scheme="dark"] .dl-intro { color: #9B9288; }html[data-user-color-scheme="dark"] .dl-card  { background: #242424; border-color: #363636; box-shadow: 0 1px 4px rgba(0,0,0,0.25); }html[data-user-color-scheme="dark"] .dl-card:hover { transform: translateY(-5px); border-color: #E8917A; box-shadow: 0 8px 24px rgba(232,145,122,0.15); }html[data-user-color-scheme="dark"] .dl-thumb { border-bottom-color: #363636; }html[data-user-color-scheme="dark"] .dl-title { color: #E8E4DC; }html[data-user-color-scheme="dark"] .dl-desc  { color: #9B9288; }html[data-user-color-scheme="dark"] .dl-cta   { color: #E8917A; }/* Mobile: single column */@media (max-width: 680px) {  .dl-grid { grid-template-columns: 1fr; }  .dl-card { max-width: 400px; margin: 0 auto; width: 100%; }}</style><p class="dl-intro">Click any card to open the note directly.</p><div class="dl-grid">  <!-- 2026-04-15 -->  <div class="dl-card">    <div class="dl-thumb">      <a class="dl-overlay" href="/deep-learning/backprop_dnn_complete.html" aria-label="Open Backpropagation — Code & Implementation"></a>      <img src="/img/posts/backprop-dnn-complete.svg" alt="Backpropagation — Code & Implementation preview">    </div>    <div class="dl-body">      <p class="dl-title">Backpropagation — Code & Implementation</p>      <p class="dl-desc">8-tab deep dive into backprop — every formula, every dimension, every index. Covers notation, cheat sheet, linear/activation backward, L-model backward, and parameter update.</p>      <a class="dl-cta" href="/deep-learning/backprop_dnn_complete.html">Open &rarr;</a>    </div>  </div>  <!-- 2026-04-03 -->  <div class="dl-card">    <div class="dl-thumb">      <a class="dl-overlay" href="/deep-learning/activation_functions.html" aria-label="Open Activation Functions &amp; Gradients"></a>      <iframe src="/deep-learning/activation_functions.html" title="Activation Functions preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>    </div>    <div class="dl-body">      <p class="dl-title">Activation Functions &amp; Gradients</p>      <p class="dl-desc">Sigmoid, Tanh, ReLU, and Leaky ReLU with interactive gradient visualizations and saturation analysis.</p>      <a class="dl-cta" href="/deep-learning/activation_functions.html">Open &rarr;</a>    </div>  </div>  <!-- 2026-04-03 -->  <div class="dl-card">    <div class="dl-thumb">      <a class="dl-overlay" href="/deep-learning/backprop_explainer.html" aria-label="Open Backpropagation — Math & Intuition"></a>      <iframe src="/deep-learning/backprop_explainer.html" title="Backpropagation preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>    </div>    <div class="dl-body">      <p class="dl-title">Backpropagation — Math & Intuition</p>      <p class="dl-desc">Chain rule, forward and backward pass, and all six gradient equations with step-by-step walkthrough.</p>      <a class="dl-cta" href="/deep-learning/backprop_explainer.html">Open &rarr;</a>    </div>  </div>  <!-- 2026-04-03 -->  <div class="dl-card">    <div class="dl-thumb">      <a class="dl-overlay" href="/deep-learning/dimension_checker.html" aria-label="Open Neural Network Dimension Checker"></a>      <iframe src="/deep-learning/dimension_checker.html" title="Dimension Checker preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>    </div>    <div class="dl-body">      <p class="dl-title">Neural Network Dimension Checker</p>      <p class="dl-desc">Interactive tool for computing exact tensor shapes of weights, biases, and activations for any architecture.</p>      <a class="dl-cta" href="/deep-learning/dimension_checker.html">Open &rarr;</a>    </div>  </div>  <!-- 2026-04-03 -->  <div class="dl-card">    <div class="dl-thumb">      <a class="dl-overlay" href="/deep-learning/neural_network_annotated.html" aria-label="Open Neural Network — Annotated"></a>      <iframe src="/deep-learning/neural_network_annotated.html" title="Annotated Network preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>    </div>    <div class="dl-body">      <p class="dl-title">Neural Network — Annotated</p>      <p class="dl-desc">Clickable multi-layer diagram showing weighted-sum and activation computation at every node.</p>      <a class="dl-cta" href="/deep-learning/neural_network_annotated.html">Open &rarr;</a>    </div>  </div></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coursera Deep Learning Specialization</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>deep-learning</tag>
+      
+      <tag>learning-notes</tag>
+      
+      <tag>blog</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
