@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m ':*)",
+      "Bash(jupyter --version)",
+      "Bash(python3 -c \"import nbconvert; print\\(nbconvert.__version__\\)\")",
+      "Bash(npx hexo:*)"
+    ]
+  }
+}
