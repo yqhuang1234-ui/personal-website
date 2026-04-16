@@ -306,7 +306,7 @@ date: 2026-04-02 05:12:39
 
   <div class="ab-step">
     <p class="ab-step-year">2025 – Present</p>
-    <p class="ab-step-title">M.S. Biostatistics (CU Anschutz medical campus)</p>
+    <p class="ab-step-title">M.S. Biostatistics (CU Anschutz Medical Campus)</p>
     <p class="ab-step-desc">Bringing data science into the biomedical world — rigorous methods, clinical data, and the math behind why things work.</p>
   </div>
 
