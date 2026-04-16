@@ -116,8 +116,8 @@
         card.classList.toggle('ex-hidden', hide);
       });
 
-      /* Preview limit — only when no tag active */
-      if (activeTags.size === 0 && previewMode) {
+      /* Preview limit — only when no tag active AND not in multi-select mode */
+      if (activeTags.size === 0 && previewMode && !multiMode) {
         var shown = 0;
         cards.forEach(function (card) {
           if (!card.classList.contains('ex-hidden')) {
@@ -173,10 +173,10 @@
     }
 
     /* ── Render tag bar ──────────────────────────────────────────── */
-    function renderTagBar(tagMap) {
+    function renderTagBar(tagMap, totalCount) {
       var bar = document.getElementById('ex-tag-bar-home');
       var sorted = Object.entries(tagMap).sort(function (a, b) { return b[1] - a[1]; });
-      var allCount = Object.values(tagMap).reduce(function (s, n) { return s + n; }, 0);
+      var allCount = totalCount;
       bar.innerHTML = '';
       var allBtn = document.createElement('span');
       allBtn.className = 'ex-pill ex-active';
@@ -273,7 +273,7 @@
         };
       });
       var allItems = posts.concat(projectItems);
-      renderTagBar(buildTagMap(allItems));
+      renderTagBar(buildTagMap(allItems), allItems.length);
       renderCards(allItems);
       applyFilter();
     });

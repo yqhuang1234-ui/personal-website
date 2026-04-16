@@ -29,7 +29,7 @@ Week 2 is where things start clicking. It introduces logistic regression as a si
   </div>
   <p class="nb-desc">Logistic regression as a neural network — forward pass, cost, and gradient descent applied to image classification.</p>
   <div class="nb-actions">
-    <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%202%20Logistic_Regression_with_a_Neural_Network_mindset.ipynb" target="_blank" rel="noopener">View in browser →</a>
+    <a class="nb-btn nb-btn-view" href="/deep-learning/week2_logistic_regression.html" target="_blank" rel="noopener">View in browser →</a>
     <a class="nb-btn nb-btn-dl" href="/files/week%202%20Logistic_Regression_with_a_Neural_Network_mindset.ipynb" download="Logistic_Regression_with_a_Neural_Network_mindset.ipynb">Download .ipynb</a>
   </div>
 </div>
@@ -49,7 +49,7 @@ Week 3 extends the single-neuron picture into a two-layer network. You work thro
   </div>
   <p class="nb-desc">Two-class classification on planar data using a one-hidden-layer network, with activation function comparisons.</p>
   <div class="nb-actions">
-    <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%203%20Planar_data_classification_with_one_hidden_layer.ipynb" target="_blank" rel="noopener">View in browser →</a>
+    <a class="nb-btn nb-btn-view" href="/deep-learning/week3_planar_data_classification.html" target="_blank" rel="noopener">View in browser →</a>
     <a class="nb-btn nb-btn-dl" href="/files/week%203%20Planar_data_classification_with_one_hidden_layer.ipynb" download="Planar_data_classification_with_one_hidden_layer.ipynb">Download .ipynb</a>
   </div>
 </div>
@@ -69,8 +69,20 @@ Week 4 generalizes everything to an L-layer network. The notation gets a bit hea
   </div>
   <p class="nb-desc">Builds the core components of an L-layer network from scratch — forward, backward, and parameter update for any depth.</p>
   <div class="nb-actions">
-    <a class="nb-btn nb-btn-view" href="https://nbviewer.org/github/yqhuang1234-ui/yqhuang1234-ui.github.io/blob/main/source/files/week%204%20Building_your_Deep_Neural_Network_Step_by_Step.ipynb" target="_blank" rel="noopener">View in browser →</a>
+    <a class="nb-btn nb-btn-view" href="/deep-learning/week4_deep_neural_network.html" target="_blank" rel="noopener">View in browser →</a>
     <a class="nb-btn nb-btn-dl" href="/files/week%204%20Building_your_Deep_Neural_Network_Step_by_Step.ipynb" download="Building_your_Deep_Neural_Network_Step_by_Step.ipynb">Download .ipynb</a>
+  </div>
+</div>
+
+<div class="nb-card">
+  <div class="nb-card-header">
+    <span class="nb-label">Jupyter Notebook · Week 4</span>
+    <span class="nb-filename">Deep_Neural_Network_Application.ipynb</span>
+  </div>
+  <p class="nb-desc">Applies the Week 4 framework to image classification — using a deep network to distinguish cat vs. non-cat images with improved accuracy over logistic regression.</p>
+  <div class="nb-actions">
+    <a class="nb-btn nb-btn-view" href="/deep-learning/week4_deep_neural_network_application.html" target="_blank" rel="noopener">View in browser →</a>
+    <a class="nb-btn nb-btn-dl" href="/files/week%204%20Deep%20Neural%20Network%20-%20Application.ipynb" download="Deep_Neural_Network_Application.ipynb">Download .ipynb</a>
   </div>
 </div>
 
@@ -222,6 +234,12 @@ Week 4 generalizes everything to an L-layer network. The notation gets a bit hea
 
 ---
 
-If you want a more visual take on the fundamentals, I also put together an [Interactive Playground — Neural Networks and Deep Learning](https://yqhuang1234-ui.github.io/2026/04/04/neural-networks-deep-learning-notes/) with annotated diagrams and activation function visualizations.
+If you want a more visual take on the fundamentals, I also put together an [Interactive Playground — Neural Networks and Deep Learning](https://yqhuang1234-ui.github.io/2026/04/03/neural-networks-deep-learning-notes/) with annotated diagrams and activation function visualizations.
 
 These are personal study notes — written to help me remember, not as a textbook replacement. The Notion pages get updated as I revisit the material, so they should stay reasonably current. If something looks off or unclear, it probably means I'm still figuring it out too.
+
+---
+
+## Certificate
+
+<img src="/img/posts/coursera-certificate.png" alt="Coursera Certificate — Neural Networks and Deep Learning" style="display:block; max-width:560px; width:100%; margin:0 auto; border:1px solid #E8E2D9; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">
